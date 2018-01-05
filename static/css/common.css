@@ -1,0 +1,151 @@
+/*字体颜色*/
+.ftGray {
+  color: #888;
+}
+/*标题*/
+.PGX_title,
+h1 {
+  font-size: 0.75rem;
+  display: block;
+}
+/*普通*/
+p,
+h2,
+span,
+a,
+div {
+  font-size: 0.44444444rem;
+}
+.PGX_number {
+  font-size: 0.55555556rem;
+}
+.footBtn {
+  line-height: 1.38888889rem;
+  height: 1.38888889rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: #0090ff;
+  color: #fff;
+}
+.footBtn.disable {
+  background: #e5e5e5;
+}
+.footBtn2 {
+  width: 100%;
+  position: fixed;
+  bottom: 0.55555556rem;
+  left: 0;
+  text-align: center;
+}
+.footBtn2 span {
+  border-radius: 0.83333333rem;
+  display: inline-block;
+  width: 8.86111111rem;
+  line-height: 1.38888889rem;
+  height: 1.38888889rem;
+  color: #fff;
+  background: #0090ff;
+}
+.footBtn2.disable span {
+  background: #e5e5e5;
+}
+.PGX_desc {
+  font-size: 0.33333333rem;
+}
+/*提示语*/
+.PGX_toast {
+  position: fixed;
+  width: 100%;
+  pointer-events: none;
+  text-align: center;
+  top: 50%;
+  right: 100%;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0.55555556rem;
+  opacity: 1;
+  animation: PGX_toast 3s ease;
+}
+.PGX_toast span {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 0.77777778rem;
+  border-radius: 0.13888889rem;
+  color: #fff;
+  font-size: 0.47222222rem;
+}
+@keyframes PGX_toast {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.arrow {
+  display: inline-block;
+  cursor: pointer;
+  border-left: 0.04166667rem solid #0090ff;
+  border-bottom: 0.04166667rem solid #0090ff;
+  width: 0.16666667rem;
+  height: 0.16666667rem;
+  transform: rotate(-45deg);
+}
+.arrow.on {
+  transform: rotate(135deg);
+}
+.PGX_triggerToggle .arrow {
+  transform: rotate(-45deg);
+}
+.PGX_triggerToggle.on .arrow {
+  transform: rotate(135deg);
+}
+.PGX_toggle {
+  display: none;
+}
+.PGX_toggle.on {
+  display: block;
+}
+/*遮蔽层*/
+.PGX_pop {
+  display: none;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.PGX_pop.on {
+  display: block;
+}
+.PGX_pop .PGX_cover {
+  position: fixed;
+  text-align: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.PGX_pop .PGX_cover_content {
+  top: 50%;
+  display: inline-block;
+  background: #fff;
+  z-index: 2;
+  position: relative;
+}
+/*PGX_loading*/
+.PGX_loading {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.38888889rem;
+}

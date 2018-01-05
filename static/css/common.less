@@ -1,0 +1,156 @@
+@r: 1/72;
+@ft-black: #000;
+@ft-gray: #888;
+@br-gray: #e5e5e5;
+@c-blue: #0090ff;
+@c-white: #fff;
+@c-red: #ff0000;
+/*字体颜色*/
+
+.ftGray{
+	color: @ft-gray;
+}
+/*标题*/
+.PGX_title, h1{
+	font-size: @r*54rem;
+	display: block;
+}
+/*普通*/
+p, h2, span, a, div{
+	font-size: @r*32rem;
+}
+
+.PGX_number{
+	font-size: @r*40rem;
+}
+
+.footBtn{
+	line-height: @r*100rem;
+	height: @r*100rem;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left:0;
+	text-align: center;
+	background: @c-blue;
+	color: @c-white;
+	&.disable{
+		background: @br-gray;
+	}
+}
+.footBtn2{
+	width: 100%;
+	position: fixed;
+	bottom: @r*40rem;
+	left:0;
+	text-align: center;
+	span{
+		border-radius: @r*60rem;
+		display: inline-block;
+		width: @r*638rem;
+		line-height: @r*100rem;
+		height: @r*100rem;
+		color: @c-white;
+		background: @c-blue;
+	}
+	&.disable span{
+		background: @br-gray;
+	}
+}
+.PGX_desc{
+	font-size: @r*24rem;
+}
+/*提示语*/
+.PGX_toast{
+	position: fixed;
+	width:100%;
+	pointer-events: none;
+	text-align: center;
+	top:50%;
+	right:100%;
+	left:0;
+	box-sizing: border-box;
+	padding:0 @r*40rem;
+	span{
+		display: inline-block;
+		background: rgba(0, 0, 0, 0.8);
+		padding: @r*36rem @r*56rem;
+		border-radius: @r*10rem;
+		color: @c-white;
+		font-size: @r*34rem;
+	}
+	opacity:1;
+	animation: PGX_toast 3s ease;
+}
+@keyframes PGX_toast {
+	0% {opacity: 1;}
+	80% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.arrow{
+	display: inline-block;
+	cursor: pointer;
+	border-left: @r*3rem solid @c-blue;
+	border-bottom: @r*3rem solid @c-blue;
+	width: @r*12rem;
+	height: @r*12rem;
+	transform:rotate(-45deg);
+	&.on{
+		transform:rotate(135deg);
+	}
+}
+.PGX_triggerToggle{
+	.arrow{
+		transform:rotate(-45deg);
+	}
+	&.on{
+		.arrow{
+			transform:rotate(135deg);
+		}
+	}
+}
+.PGX_toggle{
+	display: none;
+	&.on{
+		display: block;
+	}
+}
+
+/*遮蔽层*/
+.PGX_pop{
+	display: none;
+	&.on{
+		display: block;
+	}
+	position: fixed;
+	text-align: center;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	.PGX_cover{
+		position: fixed;
+		text-align: center;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 1;
+	}
+	.PGX_cover_content{
+		top: 50%;
+		display: inline-block;
+		background: #fff;
+		z-index: 2;
+		position: relative;
+	}
+}
+/*PGX_loading*/
+.PGX_loading{
+	width:100%;
+	display: inline-block;
+	text-align: center;
+	line-height: @r*100rem;
+}

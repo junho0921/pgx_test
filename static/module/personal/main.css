@@ -1,0 +1,31 @@
+/*基本工具*/
+/*混合Mixin*/
+#info_wrap {
+  padding: 0 0.55555556rem;
+  box-sizing: border-box;
+}
+#info_wrap .PGX_title {
+  margin-top: 1.25rem;
+  margin-bottom: 1.05555556rem;
+  width: 100%;
+  text-align: center;
+}
+#info_wrap .intro {
+  margin-top: -0.44444444rem;
+  margin-bottom: 0.61111111rem;
+  text-align: center;
+  width: 100%;
+}
+#info_wrap .list {
+  margin-top: 0.55555556rem;
+}
+#info_wrap .list li {
+  line-height: 1.38888889rem;
+  height: 1.38888889rem;
+  border-bottom: 0.02777778rem solid #e5e5e5;
+}
+#info_wrap .itemDesc {
+  display: inline-block;
+  width: 1.58333333rem;
+  color: #888;
+}

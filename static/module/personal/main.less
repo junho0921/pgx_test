@@ -1,0 +1,49 @@
+@r: 1/72;
+@ft-black: #000;
+@ft-gray: #888;
+@br-gray: #e5e5e5;
+@c-blue: #0090ff;
+@c-white: #fff;
+@c-red: #ff0000;
+@1px: @r*2rem;
+
+/*基本工具*/
+/*混合Mixin*/
+.nowrap () {
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+};
+
+#info_wrap {
+	padding: 0 @r*40rem;
+	box-sizing: border-box;
+	.PGX_title{
+		margin-top: @r*90rem;
+		margin-bottom: @r*76rem;
+		width:100%;
+		text-align: center;
+	}
+	.intro{
+		margin-top: -@r*32rem;
+		margin-bottom: @r*44rem;
+		text-align: center;
+		width:100%;
+	}
+	.intro{
+
+	}
+	.list{
+		margin-top: @r*40rem;
+	}
+	.list li{
+		line-height: @r*100rem;
+		height: @r*100rem;
+		border-bottom: @1px solid @br-gray;
+	}
+	.itemDesc{
+		display: inline-block;
+		width:@r*114rem;
+		color: @ft-gray;
+	}
+}

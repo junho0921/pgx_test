@@ -1,0 +1,47 @@
+<div class="main brk" id="info_wrap">
+	<div class="PGX_title">个人资料也</div>
+	<div id="info_content">
+		<span class="PGX_loading">加载中</span>
+	</div>
+</div>
+
+<script type="text/html" id="infoTpl">
+	<% if(data.isShare){ %>
+		<div class='intro'>邀请您参与<%= data.name%>的年终总结</div>
+		<p class="ftGray">请确认您的信息</p>
+	<% }%>
+	<ul class="list">
+		<li>
+			<span class="itemDesc">姓名</span>
+			<% if(data.name){ %>
+				<span class="itemCnt name"><%= data.name%></span>
+			<% }else{ %>
+				<span class="itemCnt ftGray">获取失败</span>
+			<% }%>
+		</li>
+		<li>
+			<span class="itemDesc">部门</span>
+			<% if(data.bg){ %>
+				<span class="itemCnt bg"><%= data.bg%></span>
+			<% }else{ %>
+				<span class="itemCnt ftGray">获取失败</span>
+			<% }%>
+		</li>
+		<li>
+			<span class="itemDesc">职位</span>
+			<% if(data.pos){ %>
+				<span class="itemCnt pos"><%= data.pos%></span>
+			<% }else{ %>
+				<span class="itemCnt ftGray">获取失败</span>
+			<% }%>
+		</li>
+	</ul>
+	<% if(status==1){ %>
+	<span class="footBtn2 PGX_forward"><span>下一步</span></span>
+	<% }else{ %>
+	<span class="footBtn2 disable"><span>获取失败</span></span>
+	<% }%>
+</script>
+
+<script type="text/html" id="demo1Tpl">
+</script>
