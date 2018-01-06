@@ -14,7 +14,7 @@ define(function (require, exports, module) {
     },
     renderContent: function () {
       app.renderTpl('personalTpl', 'personal_wrap', {
-          name: app.global.targetName,
+          name: app.global.info.name,
         isSubmit : true
       });
     },

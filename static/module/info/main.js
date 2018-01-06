@@ -24,13 +24,15 @@ define(function (require, exports, module) {
     requestCallback: function (result) {
       if(result){
         result.data = $.isEmptyObject(result.data) ? {} : result.data;
-        app.global.targetName = result.data && result.data.name;
-        this.isShare = result.data && result.data.isShare;
+        app.global.info = result.data;
         app.renderTpl('infoTpl', 'info_content', result);
       }
     },
     PGX_forward: function (e) {
-      var isShare = this.isShare;
+      if(!app.global.info){
+        return app.utils.toast('获取信息失败');
+      }
+      var isShare = app.global.info.isShare;
       var reset = app.utils.btnLoading(e.target);
       if(!reset){return;}
       app.request({
@@ -46,7 +48,7 @@ define(function (require, exports, module) {
                 url: 'req_pos',
                 success: function (result) {
                   if(result.data){
-                    app.global.isTop = !!result.data.isTop;
+                    app.global.info.isTop = !!result.data.isTop;
                     if(result.data.isTop == 1){
                       return app.navigate('#superiorScore', true);
                     }else{

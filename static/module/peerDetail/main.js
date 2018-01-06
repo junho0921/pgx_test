@@ -5,7 +5,13 @@ define(function (require, exports, module) {
   'use strict';
 
   module.exports = app.View.extend({
-    initialize:function () {
+    initialize:function (){
+      if(app.global.info === undefined || app.global.info.isTop !== false){
+        app.utils.toast('正返回首页');
+        return setTimeout(function () {
+          app.navigate('#info', true);
+        }, 1000);
+      }
       app.utils.loadingPage('#peerDetail_content');
       this.reqKpiData();
       this.reqEvaluateData();
