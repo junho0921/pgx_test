@@ -26,7 +26,11 @@ define(function () {
           bg: '平台事业部/设计部/设计2组',
         }
       },
-      error:{"servertime":1510040546,"status":0,"errorcode":"抱歉!此宝箱已经过期！","data":[]}
+      error:{
+        "servertime":1510040546,
+        "status":0,
+        "msg":"参数错误",
+        "data":[]}
     },
     req_pos:{
       /*接口状态*/
@@ -51,7 +55,7 @@ define(function () {
         "status": 1,
         "errorcode": "",
         "data": {
-          isEnd: 0,
+          isEnd: 0
         }
       },
       error:{"servertime":1510040546,"status":0,"errorcode":"抱歉!此宝箱已经过期！","data":[]}

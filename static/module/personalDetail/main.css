@@ -17,10 +17,7 @@
   line-height: 1.72222222rem;
   height: 1.86111111rem;
 }
-#personalDetail_wrap .line:nth-child(2) {
-  padding-bottom: 0.25rem;
-}
-#personalDetail_wrap .line:nth-child(2) > * {
+#personalDetail_wrap .line > * {
   line-height: 0.97222222rem;
 }
 #personalDetail_wrap .line:last-child {

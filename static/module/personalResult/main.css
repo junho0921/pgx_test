@@ -7,6 +7,9 @@
 #personalResult_wrap .PGX_number {
   margin-left: 0.25rem;
 }
+#personalResult_wrap .fixPaddingTop {
+  margin-top: 0.30555556rem;
+}
 #personalResult_wrap .line {
   box-sizing: border-box;
   padding: 0.25rem 0.55555556rem;

@@ -38,7 +38,7 @@ div {
   color: #fff;
 }
 .footBtn.disable {
-  background: #e5e5e5;
+  background: #888;
 }
 .footBtn2 {
   width: 100%;
@@ -57,7 +57,7 @@ div {
   background: #0090ff;
 }
 .footBtn2.disable span {
-  background: #e5e5e5;
+  background: #888;
 }
 .PGX_desc {
   font-size: 0.33333333rem;

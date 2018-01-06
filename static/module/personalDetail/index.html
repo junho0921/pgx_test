@@ -14,9 +14,11 @@
 			<% } %>
 		</div>
 		<% if($.isArray(kpiLists) && kpiLists.length > 0){ %>
+		<% _.each(kpiLists, function(item, index) {%>
 		<div class="line">
+			<% if(index===0){ %>
 			<h2 class="ftBlue">KPI / 关键任务</h2>
-			<% _.each(kpiLists, function(item, index) {%>
+			<% } %>
 			<div>
 				<h3><%= item.kpiKey %></h3>
 				<div class="itemLine">
@@ -28,8 +30,8 @@
 					--><span><%= item.kpiSelfSore %></span>
 				</div>
 			</div>
-			<%});%>
 		</div>
+		<%});%>
 		<% }%>
 		<% if(kpiEvaluate){ %>
 		<div class="line">

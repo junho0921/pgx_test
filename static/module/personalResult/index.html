@@ -7,7 +7,7 @@
 		<div class="line">
 			<h1 class="PGX_title"><%= name %></h1>
 			<% if(selfSore){ %>
-			<div class="PGX_fr">
+			<div class="PGX_fr fixPaddingTop">
 				<span>年度得分</span><!--
 				--><span class="PGX_number" id="selfSore"><%= selfSore %></span>
 			</div>
@@ -18,7 +18,7 @@
 			<% _.each(kpiLists, function(item, index) {%>
 			<div class="line">
 				<% if(index===0){ %>
-				<h2 class="ftBlue">KPI/关键任务</h2>
+				<h2 class="ftBlue">KPI / 关键任务</h2>
 				<% } %>
 				<h3><%= item.kpiKey %></h3>
 				<div class="itemLine">
