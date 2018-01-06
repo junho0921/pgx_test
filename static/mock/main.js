@@ -1,24 +1,25 @@
 define(function () {
   window._mock = window._mock || {};
-  function init () {
-    /*嵌套测试*/
-    function wrap (originalFuncName, wrapFunc){
-      var ary = originalFuncName.split('.'),
-        len = ary.length,
-        funcName,
-        context = window;
-      ary.forEach(function (name, i) {
-        if(i + 1 == len){
-          funcName = name;
-        }else{
-          context = context[name]
-        }
-      });
-      var ori = context[funcName];
-      context[funcName] = function () {
-        wrapFunc(arguments, ori, originalFuncName, context);
+  /*嵌套测试*/
+  function wrap (originalFuncName, wrapFunc){
+    var ary = originalFuncName.split('.'),
+      len = ary.length,
+      funcName,
+      context = window;
+    ary.forEach(function (name, i) {
+      if(i + 1 == len){
+        funcName = name;
+      }else{
+        context = context[name]
       }
+    });
+    var ori = context[funcName];
+    context[funcName] = function () {
+      wrapFunc(arguments, ori, originalFuncName, context);
     }
+  }
+
+  function init () {
 
     function checkListToMock (data) {
       if(!data || window._stopMock){return false;}
@@ -57,5 +58,8 @@ define(function () {
       }
     });
   }
-  return init;
+  return {
+    init: init,
+    wrap: wrap
+  };
 });
