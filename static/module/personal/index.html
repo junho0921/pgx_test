@@ -6,23 +6,18 @@
 	<div class="PGX_title">
 		<%= name %>
 	</div>
-	<% if(isSubmit){ %>
-		<div class="kpiStatus">
-			<p>您的年终KPI已提交</p><br>
-			<p>可以邀请他人参评</p>
-		</div>
-		<div>
-			<span class="appLink moreInfo" data-link="personalDetail">查看</span>
-		</div>
-		<div class="inviteBtn">
-			<p>邀请同时参评</p>
-			<p class="PGX_desc">包含直属上级与至少2位平级</p>
-		</div>
-		<ul id="evaluateList"></ul>
-	<% }else{ %>
-	    <p class="kpiStatus">您的年终KPI未能获取，请联系工作人员</p>
-	<% }%>
-	<!--<span class="footBtn PGX_forward"><span>下一步</span></span>-->
+	<div class="kpiStatus">
+		<p>您的年终KPI已提交</p><br>
+		<p>可以邀请他人参评</p>
+	</div>
+	<div>
+		<span class="appLink moreInfo" data-link="personalDetail">查看</span>
+	</div>
+	<div class="inviteBtn">
+		<p>邀请同时参评</p>
+		<p class="PGX_desc">包含直属上级与至少2位平级</p>
+	</div>
+	<ul id="evaluateList"></ul>
 </script>
 
 <script type="text/html" id="evaluateListTpl">

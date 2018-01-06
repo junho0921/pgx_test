@@ -6,6 +6,12 @@ define(function (require, exports, module) {
 
   module.exports = app.View.extend({
     initialize:function () {
+      if(app.global.info === undefined){
+        app.utils.toast('正返回首页');
+        return setTimeout(function () {
+          app.navigate('#info', true);
+        }, 1000);
+      }
       this.renderContent();
       this.reqEvaluateData();
     },
@@ -13,10 +19,7 @@ define(function (require, exports, module) {
       'touchstart .inviteBtn': 'invite',
     },
     renderContent: function () {
-      app.renderTpl('personalTpl', 'personal_wrap', {
-          name: app.global.info.name,
-        isSubmit : true
-      });
+      app.renderTpl('personalTpl', 'personal_wrap', {name: app.global.info.name});
     },
     reqEvaluateData: function () {
       app.request({
