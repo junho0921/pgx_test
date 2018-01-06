@@ -6,26 +6,27 @@ define(function (require, exports, module) {
 
   module.exports = app.View.extend({
     initialize:function () {
-      console.log('info: 初始化组件');
-      this.requestCallback = this.requestCallback.bind(this);
-      this.reqInfoData();
+      this.renderContent();
+      this.reqEvaluateData();
     },
     events:{
       'touchstart .PGX_forward': 'PGX_forward',
     },
-    reqInfoData: function () {
+    renderContent: function () {
+      app.renderTpl('personalTpl', 'personal_wrap', {
+          name: app.global.targetName,
+        isSubmit : true
+      });
+    },
+    reqEvaluateData: function () {
       app.request({
-        url: 'req_info',
+        url: 'reqEvaluateData',
         success: this.requestCallback,
-        error: this.requestCallback,
-        timeout: this.requestCallback
       });
     },
     requestCallback: function (result) {
       if(result){
-        result.data = $.isEmptyObject(result.data) ? {} : result.data;
-        this.isShare = result.data && result.isShare;
-        app.renderTpl('infoTpl', 'info_content', result);
+        app.renderTpl('evaluateListTpl', 'evaluateList', result);
       }
     },
     PGX_forward: function () {

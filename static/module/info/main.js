@@ -6,7 +6,6 @@ define(function (require, exports, module) {
 
   module.exports = app.View.extend({
     initialize:function () {
-      console.log('info: 初始化组件');
       this.requestCallback = this.requestCallback.bind(this);
       this.reqInfoData();
     },
@@ -24,6 +23,7 @@ define(function (require, exports, module) {
     requestCallback: function (result) {
       if(result){
         result.data = $.isEmptyObject(result.data) ? {} : result.data;
+        app.global.targetName = result.data && result.data.name;
         this.isShare = result.data && result.data.isShare;
         app.renderTpl('infoTpl', 'info_content', result);
       }

@@ -1,31 +1,59 @@
 /*基本工具*/
 /*混合Mixin*/
-#info_wrap {
-  padding: 0 0.55555556rem;
+#personal_wrap {
+  padding: 0 0.55555556rem 1.66666667rem 0.55555556rem;
   box-sizing: border-box;
 }
-#info_wrap .PGX_title {
-  margin-top: 1.25rem;
-  margin-bottom: 1.05555556rem;
+#personal_wrap .PGX_title {
+  margin-top: 0.83333333rem;
+  margin-bottom: 0.75rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
-#info_wrap .intro {
-  margin-top: -0.44444444rem;
-  margin-bottom: 0.61111111rem;
-  text-align: center;
-  width: 100%;
+#personal_wrap .kpiStatus {
+  line-height: 0.63888889rem;
 }
-#info_wrap .list {
-  margin-top: 0.55555556rem;
+#personal_wrap .moreInfo {
+  line-height: 1.88888889rem;
+  color: #0090ff;
 }
-#info_wrap .list li {
-  line-height: 1.38888889rem;
-  height: 1.38888889rem;
-  border-bottom: 0.02777778rem solid #e5e5e5;
+#personal_wrap .inviteBtn {
+  padding: 0.27777778rem 0.55555556rem;
+  border-radius: 0.13888889rem;
+  background: #0090ff;
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  min-height: 1.94444444rem;
 }
-#info_wrap .itemDesc {
-  display: inline-block;
-  width: 1.58333333rem;
-  color: #888;
+#personal_wrap .inviteBtn p {
+  padding-top: 0.08333333rem;
+  display: block;
+}
+#personal_wrap #evaluateList li {
+  margin-top: 0.27777778rem;
+  padding: 0.27777778rem 0.55555556rem;
+  border-radius: 0.13888889rem;
+  box-sizing: border-box;
+  border: 0.02777778rem solid #0090ff;
+  cursor: pointer;
+  min-height: 1.94444444rem;
+  position: relative;
+}
+#personal_wrap #evaluateList li .name,
+#personal_wrap #evaluateList li .pos {
+  padding-top: 0.08333333rem;
+  display: block;
+}
+#personal_wrap #evaluateList li .PGX_triggerToggle {
+  position: absolute;
+  right: 0.47222222rem;
+  top: 0.55555556rem;
+  color: #0090ff;
+}
+#personal_wrap #evaluateList li .PGX_triggerToggle .arrow {
+  margin-left: 0.30555556rem;
+}
+#personal_wrap #evaluateList li p {
+  padding-top: 0.22222222rem;
 }

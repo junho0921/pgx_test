@@ -10,40 +10,75 @@
 /*基本工具*/
 /*混合Mixin*/
 .nowrap () {
-	text-overflow:ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 };
 
-#info_wrap {
-	padding: 0 @r*40rem;
-	box-sizing: border-box;
-	.PGX_title{
-		margin-top: @r*90rem;
-		margin-bottom: @r*76rem;
-		width:100%;
-		text-align: center;
-	}
-	.intro{
-		margin-top: -@r*32rem;
-		margin-bottom: @r*44rem;
-		text-align: center;
-		width:100%;
-	}
-	.intro{
+#personal_wrap {
+  padding: 0 @r*40rem  @r*120rem  @r*40rem ;
+  box-sizing: border-box;
+  .PGX_title{
+    margin-top: @r*60rem;
+    margin-bottom: @r*54rem;
+    width:100%;
+    text-align: left;
+  }
+  .kpiStatus{
+    line-height: @r*46rem;
+  }
+  .moreInfo{
+    line-height: @r*136rem;
+    color: @c-blue;
+  }
 
-	}
-	.list{
-		margin-top: @r*40rem;
-	}
-	.list li{
-		line-height: @r*100rem;
-		height: @r*100rem;
-		border-bottom: @1px solid @br-gray;
-	}
-	.itemDesc{
-		display: inline-block;
-		width:@r*114rem;
-		color: @ft-gray;
-	}
+  .inviteBtn{
+    padding: @r*20rem @r*40rem;
+    border-radius: @r*10rem;
+    background: @c-blue;
+    color: @c-white;
+    cursor: pointer;
+    box-sizing: border-box;
+    min-height: @r*140rem;
+    p{
+      padding-top: @r*6rem;
+      display: block;
+    }
+  }
+
+  #evaluateList{
+    li{
+      margin-top:@r*20rem;
+      padding: @r*20rem @r*40rem;
+      border-radius: @r*10rem;
+      box-sizing: border-box;
+      border: @1px solid @c-blue;
+      cursor: pointer;
+      min-height: @r*140rem;
+
+      position: relative;
+
+      .name, .pos{
+        padding-top: @r*6rem;
+        display: block;
+      }
+
+      .PGX_triggerToggle{
+        position: absolute;
+        right: @r*34rem;
+        top: @r*40rem;
+        color: @c-blue;
+        .arrow{
+          margin-left: @r*22rem;
+        }
+      }
+
+
+
+      p{
+        padding-top: @r*16rem;
+      }
+    }
+
+  }
 }

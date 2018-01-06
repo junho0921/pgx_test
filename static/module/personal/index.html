@@ -1,47 +1,41 @@
-<div class="main brk" id="info_wrap">
-	<div class="PGX_title">个人资料也</div>
-	<div id="info_content">
-		<span class="PGX_loading">加载中</span>
-	</div>
+<div class="main brk" id="personal_wrap">
+	<!--content-->
 </div>
 
-<script type="text/html" id="infoTpl">
-	<% if(data.isShare){ %>
-		<div class='intro'>邀请您参与<%= data.name%>的年终总结</div>
-		<p class="ftGray">请确认您的信息</p>
-	<% }%>
-	<ul class="list">
-		<li>
-			<span class="itemDesc">姓名</span>
-			<% if(data.name){ %>
-				<span class="itemCnt name"><%= data.name%></span>
-			<% }else{ %>
-				<span class="itemCnt ftGray">获取失败</span>
-			<% }%>
-		</li>
-		<li>
-			<span class="itemDesc">部门</span>
-			<% if(data.bg){ %>
-				<span class="itemCnt bg"><%= data.bg%></span>
-			<% }else{ %>
-				<span class="itemCnt ftGray">获取失败</span>
-			<% }%>
-		</li>
-		<li>
-			<span class="itemDesc">职位</span>
-			<% if(data.pos){ %>
-				<span class="itemCnt pos"><%= data.pos%></span>
-			<% }else{ %>
-				<span class="itemCnt ftGray">获取失败</span>
-			<% }%>
-		</li>
-	</ul>
-	<% if(status==1){ %>
-	<span class="footBtn2 PGX_forward"><span>下一步</span></span>
+<script type="text/html" id="personalTpl">
+	<div class="PGX_title">
+		<%= name %>
+	</div>
+	<% if(isSubmit){ %>
+		<div class="kpiStatus">
+			<p>您的年终KPI已提交</p><br>
+			<p>可以邀请他人参评</p>
+		</div>
+		<div>
+			<span class="appLink moreInfo" data-link="personalDetail">查看</span>
+		</div>
+		<div class="inviteBtn">
+			<p>邀请同时参评</p>
+			<p class="PGX_desc">包含直属上级与至少2位平级</p>
+		</div>
+		<ul id="evaluateList"></ul>
 	<% }else{ %>
-	<span class="footBtn2 disable"><span>获取失败</span></span>
+	    <p class="kpiStatus">您的年终KPI未能获取，请联系工作人员</p>
 	<% }%>
+	<span class="footBtn PGX_forward"><span>下一步</span></span>
 </script>
 
-<script type="text/html" id="demo1Tpl">
+<script type="text/html" id="evaluateListTpl">
+	<% _.each(data, function(item, index) {%>
+		<li>
+			<span class="name"><%= item.name %></span>
+			<span class="pos PGX_desc"><%= item.pos %></span>
+			<div class="PGX_triggerToggle" data-for="<%= index %>">查看详情<span class="arrow"></span></div>
+			<div class="PGX_toggle" data-id="<%= index %>">
+				<span class="PGX_toggleInfo">
+					<%= item.evaluate %>
+				</span>
+			</div>
+		</li>
+	<%});%>
 </script>
