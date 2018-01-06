@@ -19,8 +19,9 @@
   display: block;
 }
 /*普通*/
-p, h2, h3, span, a, div{
+p, h2, h3, span, a, div, input, textarea{
   font-weight: 400;
+  font-family: "Microsoft YaHei", Arial, Verdana;
   font-size: @r*30rem;
 }
 
@@ -152,11 +153,16 @@ p, h2, h3, span, a, div{
     z-index: 1;
   }
   .PGX_cover_content{
+    padding: @r*40rem ;
     top: 50%;
     display: inline-block;
     background: #fff;
     z-index: 2;
     position: relative;
+    input, textarea{
+      line-height: @r*40rem ;
+      border: none;
+    }
   }
 }
 /*PGX_loading*/
@@ -192,4 +198,8 @@ p, h2, h3, span, a, div{
 .btnLoading{
   opacity:0.5;
   pointer-events: none;
+}
+
+.fixPaddingTop{
+  margin-top: @r*22rem;
 }

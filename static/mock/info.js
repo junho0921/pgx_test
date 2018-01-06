@@ -2,7 +2,7 @@ define(function () {
   return {
     req_info:{
       /*接口状态*/
-      status: 'success_personal',
+      status: 'success_share',
       /*报文*/
       success_personal:{
         "servertime": 1464085283,

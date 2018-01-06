@@ -49,7 +49,13 @@ define(function (require, exports, module) {
 			/*弹窗*/
       .on('touchstart', '.PGX_triggerPop', function () {
         var popId = $(this).data('for');
-        $('.PGX_pop[data-id='+popId+']').addClass('on');
+        var $pop = $('.PGX_pop[data-id='+popId+']').addClass('on');
+        var popH = $pop.find('.PGX_cover_content').height();
+        var winH = document.body.clientWidth;
+        $pop.find('.PGX_cover_content').css('top', (winH - popH) /2 );
+        setTimeout(function () {
+          $pop.find('.popFocus').focus();
+        }, 300);
       })
       .on('touchstart', '.PGX_closePop', function () {
         $(this).parents('.PGX_pop.on').removeClass('on');

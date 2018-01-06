@@ -1,0 +1,55 @@
+/*基本工具*/
+/*混合Mixin*/
+#peerDetail_wrap {
+  box-sizing: border-box;
+  padding-bottom: 2.22222222rem;
+}
+#peerDetail_wrap .PGX_number {
+  margin-left: 0.25rem;
+}
+#peerDetail_wrap .line {
+  box-sizing: border-box;
+  padding: 0.25rem 0.55555556rem;
+  border-bottom: 0.01388889rem solid #e5e5e5;
+  padding-top: 0.25rem;
+}
+#peerDetail_wrap .line:nth-child(1) {
+  line-height: 1.72222222rem;
+  height: 1.86111111rem;
+}
+#peerDetail_wrap .line > * {
+  line-height: 0.97222222rem;
+}
+#peerDetail_wrap .line:last-child {
+  border-bottom: none;
+}
+#peerDetail_wrap .content {
+  line-height: 0.55555556rem;
+  text-align: left;
+}
+#peerDetail_wrap .itemLine .ftGray {
+  margin-right: 0.45833333rem;
+}
+#peerDetail_wrap .PGX_title {
+  display: inline-block;
+}
+#peerDetail_wrap .PGX_cover_content {
+  width: 10rem;
+  box-sizing: border-box;
+}
+#peerDetail_wrap #evaluateInput {
+  width: 100%;
+  height: 3.47222222rem;
+}
+#peerDetail_wrap .inputTips {
+  float: left;
+}
+#peerDetail_wrap .inputTips.error {
+  color: #ff0000;
+}
+#peerDetail_wrap .PGX_fr .submitEvaluate {
+  padding-left: 0.55555556rem;
+}
+#peerDetail_wrap .PGX_fr .PGX_closePop {
+  padding-right: 0.55555556rem;
+}

@@ -49,7 +49,7 @@ define(function (require, exports, module) {
                     if(result.data.isTop == 1){
                       return app.navigate('#superiorScore', true);
                     }else{
-                      return app.navigate('#peerScore', true);
+                      return app.navigate('#peerDetail', true);
                     }
                   }
                   reset();
