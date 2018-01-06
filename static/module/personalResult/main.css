@@ -4,28 +4,48 @@
   box-sizing: border-box;
   padding-bottom: 2.22222222rem;
 }
+#personalResult_wrap .PGX_number {
+  margin-left: 0.25rem;
+}
 #personalResult_wrap .line {
   box-sizing: border-box;
   padding: 0.25rem 0.55555556rem;
   border-bottom: 0.01388889rem solid #e5e5e5;
   padding-top: 0.25rem;
 }
+#personalResult_wrap .line > * {
+  line-height: 0.97222222rem;
+}
 #personalResult_wrap .line:nth-child(1) {
   line-height: 1.72222222rem;
   height: 1.86111111rem;
 }
-#personalResult_wrap .line:nth-child(2) {
-  padding-bottom: 0.25rem;
-}
-#personalResult_wrap .line:nth-child(2) > * {
-  line-height: 0.97222222rem;
-}
 #personalResult_wrap .line:last-child {
   border-bottom: none;
+}
+#personalResult_wrap .line .content {
+  line-height: 0.66666667rem;
 }
 #personalResult_wrap .itemLine .ftGray {
   margin-right: 0.45833333rem;
 }
 #personalResult_wrap .PGX_title {
   display: inline-block;
+}
+#personalResult_wrap .itemInner.PGX_triggerToggle {
+  display: inline-block;
+  padding-right: 0.63888889rem;
+}
+#personalResult_wrap .itemInner.PGX_triggerToggle .arrow {
+  border-color: #888;
+}
+#personalResult_wrap .PGX_triggerToggle .arrow {
+  top: 0.36111111rem;
+}
+#personalResult_wrap .PGX_triggerToggle.on .arrow {
+  top: 0.47222222rem;
+}
+#personalResult_wrap .evaluateName {
+  line-height: 0;
+  margin-top: 0.44444444rem;
 }

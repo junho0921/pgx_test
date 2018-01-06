@@ -6,19 +6,11 @@ define(function (require, exports, module) {
 
   module.exports = app.View.extend({
     initialize:function () {
-      //this.renderContent({
-      //  name: app.global.targetName,
-      //  selfSore: null,
-      //  kpiLists: null,
-      //  kpiEvaluate: null,
-      //});
+      app.utils.loadingPage('#personalResult_wrap');
       this.reqData();
     },
     events:{
-      'touchstart .inviteBtn': 'invite',
-    },
-    renderContent: function (data) {
-      app.renderTpl('personalResultTpl', 'personalResult_wrap', data);
+      'touchstart .shareBtn': 'share',
     },
     reqData: function () {
       app.request({
@@ -31,7 +23,7 @@ define(function (require, exports, module) {
         app.renderTpl('personalResultTpl', 'personalResult_wrap', result.data);
       }
     },
-    invite: function () {
+    share: function () {
       console.log('邀请');
       app.utils.toast('todo 还没有接入api');
     }

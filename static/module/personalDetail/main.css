@@ -4,6 +4,9 @@
   box-sizing: border-box;
   padding-bottom: 2.22222222rem;
 }
+#personalDetail_wrap .PGX_number {
+  margin-left: 0.25rem;
+}
 #personalDetail_wrap .line {
   box-sizing: border-box;
   padding: 0.25rem 0.55555556rem;
