@@ -209,3 +209,6 @@ textarea {
 .fixPaddingTop {
   margin-top: 0.30555556rem;
 }
+.content {
+  line-height: 0.55555556rem;
+}

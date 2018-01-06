@@ -7,14 +7,14 @@ define(function (require, exports, module) {
   module.exports = app.View.extend({
     initialize:function () {
       app.utils.loadingPage('#personalDetail_wrap');
-      this.reqData();
+      this.reqKpiData();
     },
     events:{
       'touchstart .inviteBtn': 'invite',
     },
-    reqData: function () {
+    reqKpiData: function () {
       app.request({
-        url: 'reqPersonalDetailData',
+        url: 'kpiDetail',
         success: this.requestCallback,
       });
     },

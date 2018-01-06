@@ -1,6 +1,6 @@
 define(function () {
   return {
-    reqPersonalDetailData:{
+    allEvaluateData:{
       /*接口状态*/
       status: 'success',
       /*报文*/

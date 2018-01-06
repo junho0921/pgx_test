@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
-  var kpiDetail= require('mock/api/kpiDetail');
+  var kpiDetail = require('mock/api/kpiDetail');
   return {
-    kpiDetail:kpiDetail,
+    kpiDetail: kpiDetail,
     reqEvaluateData: {
       /*接口状态*/
       status: 'success',

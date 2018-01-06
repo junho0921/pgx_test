@@ -6,7 +6,7 @@ define(function (require, exports, module) {
 
   module.exports = app.View.extend({
     initialize:function () {
-      app.utils.loadingPage('#personalResult_wrap');
+      app.utils.loadingPage('#superiorScore_wrap');
       this.reqData();
     },
     events:{
@@ -14,13 +14,13 @@ define(function (require, exports, module) {
     },
     reqData: function () {
       app.request({
-        url: 'allEvaluateData',
+        url: 'reqPersonalDetailData',
         success: this.requestCallback,
       });
     },
     requestCallback: function (result) {
       if(result){
-        app.renderTpl('personalResultTpl', 'personalResult_wrap', result.data);
+        app.renderTpl('superiorScoreTpl', 'superiorScore_wrap', result.data);
       }
     },
     share: function () {

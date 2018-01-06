@@ -23,6 +23,9 @@
 #personalDetail_wrap .line:last-child {
   border-bottom: none;
 }
+#personalDetail_wrap .line .content {
+  line-height: 0.55555556rem;
+}
 #personalDetail_wrap .itemLine .ftGray {
   margin-right: 0.45833333rem;
 }
