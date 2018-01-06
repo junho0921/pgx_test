@@ -7,6 +7,7 @@ define(function (require, exports, module) {
   module.exports = app.View.extend({
     initialize:function () {
       this.requestCallback = this.requestCallback.bind(this);
+      app.utils.loadingPage('#info_content');
       this.reqInfoData();
     },
     events:{

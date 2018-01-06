@@ -6,11 +6,19 @@ define(function (require, exports, module) {
 
   module.exports = app.View.extend({
     initialize:function () {
-      app.utils.loadingPage('#personalDetail_wrap');
+      //this.renderContent({
+      //  name: app.global.targetName,
+      //  selfSore: null,
+      //  kpiLists: null,
+      //  kpiEvaluate: null,
+      //});
       this.reqData();
     },
     events:{
       'touchstart .inviteBtn': 'invite',
+    },
+    renderContent: function (data) {
+      app.renderTpl('personalResultTpl', 'personalResult_wrap', data);
     },
     reqData: function () {
       app.request({
@@ -20,11 +28,12 @@ define(function (require, exports, module) {
     },
     requestCallback: function (result) {
       if(result){
-        app.renderTpl('personalDetailTpl', 'personalDetail_wrap', result.data);
+        app.renderTpl('personalResultTpl', 'personalResult_wrap', result.data);
       }
     },
     invite: function () {
-      app.utils.toast('todo 还没有接入api invite');
+      console.log('邀请');
+      app.utils.toast('todo 还没有接入api');
     }
   });
 });

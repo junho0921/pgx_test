@@ -46,6 +46,11 @@ define(function (require, exports, module) {
 				console.log('parse LocalData错误', e);
 			}
 			return data;
+		},
+		loadingPage: function (id) {
+			return $(id).html(
+				'<div class="PGX_loading"><span>loading...</span></div>'
+			);
 		}
 	};
 

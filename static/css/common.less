@@ -21,11 +21,12 @@
 /*普通*/
 p, h2, h3, span, a, div{
   font-weight: 400;
-  font-size: @r*32rem;
+  font-size: @r*30rem;
 }
 
 .PGX_number{
   font-size: @r*40rem;
+  color: @c-blue;
 }
 
 .footBtn{
@@ -160,11 +161,31 @@ p, h2, h3, span, a, div{
 }
 /*PGX_loading*/
 .PGX_loading{
+  position: fixed;
   width:100%;
-  display: inline-block;
+  pointer-events: none;
   text-align: center;
-  line-height: @r*100rem;
+  top:50%;
+  right:100%;
+  left:0;
+  box-sizing: border-box;
+  padding:0 @r*40rem;
+  span{
+    display: inline-block;
+    background: @c-blue;
+    padding: @r*36rem @r*56rem;
+    border-radius: @r*10rem;
+    color: @c-white;
+    font-size: @r*34rem;
+  }
+  //animation: PGX_breath 3s ease infinite;
 }
+@keyframes PGX_breath {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+/*靠右*/
 .PGX_fr{
   float: right;
 }

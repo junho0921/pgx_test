@@ -1,31 +1,31 @@
 /*基本工具*/
 /*混合Mixin*/
-#personalDetail_wrap {
+#personalResult_wrap {
   box-sizing: border-box;
   padding-bottom: 2.22222222rem;
 }
-#personalDetail_wrap .line {
+#personalResult_wrap .line {
   box-sizing: border-box;
   padding: 0.25rem 0.55555556rem;
   border-bottom: 0.01388889rem solid #e5e5e5;
   padding-top: 0.25rem;
 }
-#personalDetail_wrap .line:nth-child(1) {
+#personalResult_wrap .line:nth-child(1) {
   line-height: 1.72222222rem;
   height: 1.86111111rem;
 }
-#personalDetail_wrap .line:nth-child(2) {
+#personalResult_wrap .line:nth-child(2) {
   padding-bottom: 0.25rem;
 }
-#personalDetail_wrap .line:nth-child(2) > * {
+#personalResult_wrap .line:nth-child(2) > * {
   line-height: 0.97222222rem;
 }
-#personalDetail_wrap .line:last-child {
+#personalResult_wrap .line:last-child {
   border-bottom: none;
 }
-#personalDetail_wrap .itemLine .ftGray {
+#personalResult_wrap .itemLine .ftGray {
   margin-right: 0.45833333rem;
 }
-#personalDetail_wrap .PGX_title {
+#personalResult_wrap .PGX_title {
   display: inline-block;
 }

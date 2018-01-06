@@ -31,7 +31,8 @@ define(function () {
         console.log('key', key, url, url.match(key));
         if(url.match(key)){
           var mockObj = window._mock[key];
-          console.log('报文:',mockObj, mockObj.status, mockObj[mockObj.status]);
+          //console.log('报文:',mockObj, mockObj.status, mockObj[mockObj.status]);
+          console.log('报文:',mockObj[mockObj.status]);
           var mockData = mockObj[mockObj.status];
           if(mockData){
             setTimeout(function () {
@@ -40,7 +41,7 @@ define(function () {
               }else if($.isFunction(data.callbackfn)){
                 data.callbackfn(mockData)
               }
-            }, 1000);
+            }, 500);
             return true;
           }
         }

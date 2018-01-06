@@ -1,0 +1,48 @@
+@r: 1/72;
+@ft-black: #000;
+@ft-gray: #888;
+@br-gray: #e5e5e5;
+@c-blue: #0090ff;
+@c-white: #fff;
+@c-red: #ff0000;
+@1px: @r*1rem;
+
+/*基本工具*/
+/*混合Mixin*/
+.nowrap () {
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+};
+
+#personalResult_wrap {
+  box-sizing: border-box;
+  padding-bottom: @r*160rem;
+  .line{
+    box-sizing: border-box;
+    padding: @r*18rem @r*40rem;
+    border-bottom: @1px solid @br-gray;
+    padding-top: @r*18rem;
+    &:nth-child(1){
+      line-height: @r*124rem;
+      height: @r*134rem;
+    }
+    &:nth-child(2){
+      &>*{
+        line-height: @r*70rem;
+      }
+      padding-bottom: @r*18rem;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  .itemLine{
+    .ftGray{
+      margin-right: @r*33rem;
+    }
+  }
+  .PGX_title{
+    display: inline-block;
+  }
+}
