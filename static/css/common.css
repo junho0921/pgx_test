@@ -193,3 +193,7 @@ div {
 .PGX_fr {
   float: right;
 }
+.btnLoading {
+  opacity: 0.5;
+  pointer-events: none;
+}

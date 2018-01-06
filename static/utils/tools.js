@@ -51,7 +51,21 @@ define(function (require, exports, module) {
 			return $(id).html(
 				'<div class="PGX_loading"><span>loading...</span></div>'
 			);
-		}
+		},
+		btnLoading: function (element){
+			function _clear () {
+				window.clearTimeout(element.timer);
+				element.btnLoading = false;
+			}
+			if(element.btnLoading){
+				app.utils.toast('正处理');
+				return false;
+			}else{
+				element.btnLoading = true;
+				element.timer = window.setTimeout(_clear, 3000);
+				return _clear;
+			}
+	}
 	};
 
 	return utils;

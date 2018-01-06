@@ -29,39 +29,43 @@ define(function (require, exports, module) {
         app.renderTpl('infoTpl', 'info_content', result);
       }
     },
-    PGX_forward: function () {
-
-      // todo btn disable
+    PGX_forward: function (e) {
       var isShare = this.isShare;
+      var reset = app.utils.btnLoading(e.target);
+      if(!reset){return;}
       app.request({
         url: 'req_status',
         success: function (result) {
           var isEnd = result && result.data.isEnd;
-          if(isShare){
-            app.request({
-              url: 'req_pos',
-              success: function (result) {
-                if(result.data){
-                  if(result.data.isTop == 1){
-                    return app.navigate('#superiorScore', true);
-                  }else{
-                    return app.navigate('#peerScore', true);
-                  }
-                }
-                return app.utils.toast('数据错误, 抱歉');
-              }
-            });
+          if(isEnd){
+            // 结束了便直接显示目标人的评价结果
+            app.navigate('#personalResult', true);
           }else{
-            if(isEnd){
-              app.navigate('#personalResult', true);
+            if(isShare){
+              app.request({
+                url: 'req_pos',
+                success: function (result) {
+                  if(result.data){
+                    if(result.data.isTop == 1){
+                      return app.navigate('#superiorScore', true);
+                    }else{
+                      return app.navigate('#peerScore', true);
+                    }
+                  }
+                  reset();
+                  return app.utils.toast('数据错误, 抱歉');
+                },
+                error: reset,
+                timeout: reset
+              });
             }else{
               app.navigate('#personal', true);
             }
           }
-        }
+        },
+        error: reset,
+        timeout: reset
       });
-
-
     }
   });
 });
