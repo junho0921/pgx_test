@@ -46,6 +46,7 @@ define(function (require, exports, module) {
                 url: 'req_pos',
                 success: function (result) {
                   if(result.data){
+                    app.global.isTop = !!result.data.isTop;
                     if(result.data.isTop == 1){
                       return app.navigate('#superiorScore', true);
                     }else{

@@ -1,0 +1,31 @@
+@r: 1/72;
+@ft-black: #000;
+@ft-gray: #888;
+@br-gray: #e5e5e5;
+@c-blue: #0090ff;
+@c-white: #fff;
+@c-red: #ff0000;
+@1px: @r*2rem;
+
+/*基本工具*/
+/*混合Mixin*/
+.nowrap () {
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+};
+
+#success_wrap {
+  padding: @r*56rem @r*40rem @r*200rem  @r*40rem ;
+  box-sizing: border-box;
+  h1{
+    margin-bottom: @r*56rem ;
+  }
+  div{
+    margin-bottom: @r*24rem ;
+  }
+  .ftBlue{
+    display: block;
+    margin-top: @r*50rem ;
+  }
+}

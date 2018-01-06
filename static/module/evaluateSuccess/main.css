@@ -1,0 +1,16 @@
+/*基本工具*/
+/*混合Mixin*/
+#success_wrap {
+  padding: 0.77777778rem 0.55555556rem 2.77777778rem 0.55555556rem;
+  box-sizing: border-box;
+}
+#success_wrap h1 {
+  margin-bottom: 0.77777778rem;
+}
+#success_wrap div {
+  margin-bottom: 0.33333333rem;
+}
+#success_wrap .ftBlue {
+  display: block;
+  margin-top: 0.69444444rem;
+}

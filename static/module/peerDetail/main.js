@@ -40,7 +40,7 @@ define(function (require, exports, module) {
           url: 'successEvaluate',
           data: value,
           success: function () {
-            app.navigate('#successEvaluate', true);
+            app.navigate('#evaluateSuccess', true);
           },
         });
       }
