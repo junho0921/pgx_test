@@ -6,27 +6,29 @@ define(function (require, exports, module) {
 
   module.exports = app.View.extend({
     initialize:function () {
-      this.renderContent();
-      this.reqEvaluateData();
+      this.renderContent({
+        name: app.global.targetName,
+        selfSore:0,
+        kpiLists:0,
+        kpiEvaluate:0,
+      });
+      this.reqData();
     },
     events:{
       'touchstart .inviteBtn': 'invite',
     },
-    renderContent: function () {
-      app.renderTpl('personalTpl', 'personal_wrap', {
-          name: app.global.targetName,
-        isSubmit : true
-      });
+    renderContent: function (data) {
+      app.renderTpl('personalDetailTpl', 'personalDetail_wrap', data);
     },
-    reqEvaluateData: function () {
+    reqData: function () {
       app.request({
-        url: 'reqEvaluateData',
+        url: 'reqPersonalDetailData',
         success: this.requestCallback,
       });
     },
     requestCallback: function (result) {
       if(result){
-        app.renderTpl('evaluateListTpl', 'evaluateList', result);
+        app.renderTpl('personalDetailTpl', 'personalDetail_wrap', result.data);
       }
     },
     invite: function () {

@@ -9,13 +9,18 @@
 .ftGray{
   color: @ft-gray;
 }
+.ftBlue{
+  color: @c-blue;
+}
 /*标题*/
 .PGX_title, h1{
+  font-weight: 400;
   font-size: @r*54rem;
   display: block;
 }
 /*普通*/
-p, h2, span, a, div{
+p, h2, h3, span, a, div{
+  font-weight: 400;
   font-size: @r*32rem;
 }
 
@@ -101,7 +106,7 @@ p, h2, span, a, div{
 }
 .PGX_triggerToggle{
   position: relative;
-  padding-right: @r*22rem;
+  padding-right: @r*50rem;
   .arrow{
     position: absolute;
     right: 0;
@@ -159,4 +164,7 @@ p, h2, span, a, div{
   display: inline-block;
   text-align: center;
   line-height: @r*100rem;
+}
+.PGX_fr{
+  float: right;
 }

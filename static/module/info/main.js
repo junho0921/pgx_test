@@ -29,23 +29,38 @@ define(function (require, exports, module) {
       }
     },
     PGX_forward: function () {
-      if(this.isShare){
-        app.request({
-          url: 'req_pos',
-          success: function (result) {
-            if(result.data){
-              if(result.data.isTop == 1){
-                return app.navigate('#superiorScore', true);
-              }else{
-                return app.navigate('#peerScore', true);
+
+      // todo btn disable
+      var isShare = this.isShare;
+      app.request({
+        url: 'req_status',
+        success: function (result) {
+          var isEnd = result && result.data.isEnd;
+          if(isShare){
+            app.request({
+              url: 'req_pos',
+              success: function (result) {
+                if(result.data){
+                  if(result.data.isTop == 1){
+                    return app.navigate('#superiorScore', true);
+                  }else{
+                    return app.navigate('#peerScore', true);
+                  }
+                }
+                return app.utils.toast('数据错误, 抱歉');
               }
+            });
+          }else{
+            if(isEnd){
+              app.navigate('#personalResult', true);
+            }else{
+              app.navigate('#personal', true);
             }
-            return app.utils.toast('数据错误, 抱歉');
           }
-        });
-      }else{
-        app.navigate('#personal', true);
-      }
+        }
+      });
+
+
     }
   });
 });

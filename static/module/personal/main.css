@@ -1,7 +1,7 @@
 /*基本工具*/
 /*混合Mixin*/
 #personal_wrap {
-  padding: 0 0.55555556rem 1.66666667rem 0.55555556rem;
+  padding: 0 0.55555556rem 2.77777778rem 0.55555556rem;
   box-sizing: border-box;
 }
 #personal_wrap .PGX_title {
@@ -53,6 +53,11 @@
 }
 #personal_wrap #evaluateList li .PGX_triggerToggle .arrow {
   margin-left: 0.30555556rem;
+}
+#personal_wrap #evaluateList li .PGX_toggle {
+  margin-top: 0.55555556rem;
+  margin-bottom: 0.08333333rem;
+  font-size: 0.41666667rem;
 }
 #personal_wrap #evaluateList li p {
   padding-top: 0.22222222rem;

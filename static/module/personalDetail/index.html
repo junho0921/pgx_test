@@ -1,0 +1,37 @@
+<div id="personalDetail_wrap">
+	<!--content-->
+</div>
+
+<script type="text/html" id="personalDetailTpl">
+	<div class="line">
+		<h1 class="PGX_title"><%= name %></h1>
+		<% if(selfSore){ %>
+		<div class="PGX_fr">
+			<span>自评分数</span>
+			<span class="PGX_num" id="selfSore"><%= selfSore %></span>
+		</div>
+		<% } %>
+	</div>
+	<% if($.isArray(kpiLists) && kpiLists.length > 0){ %>
+		<div class="line">
+			<h2 class="ftBlue">KPI/关键任务</h2>
+			<% _.each(kpiLists, function(item, index) {%>
+			<div>
+				<h3><%= item.kpiKey %></h3>
+				<div class="itemLine">
+					<span class="ftGray">权重</span>
+					<span><%= item.kpiRate %></span>
+				</div>
+				<div class="itemLine">
+					<span class="ftGray">自评得分</span>
+					<span><%= item.kpiSelfSore %></span>
+				</div>
+			</div>
+			<%});%>
+		</div>
+	<% }%>
+	<% if(kpiEvaluate){ %>
+	<p><%= kpiEvaluate %></p>
+	<% }%>
+	<span class="footBtn PGX_forward inviteBtn"><span>邀请同事参评</span></span>
+</script>
