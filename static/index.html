@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>酷狗音乐2017年度评优</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <script src="../node_modules/amfe-flexible/index.js"></script>
-    <link rel="stylesheet" href="css/basic.css" type="text/css">
-    <link rel="stylesheet" href="css/common.css" type="text/css">
+  <meta charset="UTF-8">
+  <title>酷狗音乐2017年度评优</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <script src="../node_modules/amfe-flexible/index.js"></script>
+  <link rel="stylesheet" href="css/basic.css" type="text/css">
+  <link rel="stylesheet" href="css/common.css" type="text/css">
 </head>
 <body>
 <div id="appWrap">
-    <section id="appHeader"></section>
-    <section id="appContainer"></section>
+  <section id="appHeader"></section>
+  <section id="appContainer"></section>
 </div>
 </body>
 <script src="../node_modules/requirejs/require.js"></script>
@@ -29,6 +29,7 @@
       tools: 'utils/tools',
       // 企业微信
       wx: 'http://res.wx.qq.com/open/js/jweixin-1.2.0',
+      // 企业微信配置
       wxConfig: 'http://qywx.kugou.com/wxdev/oa/activity/common/a4a20d2ecbc69a7238d5e26ef5587421.php?url=http://fanxing.kugou.com',
       // 页面
       appHeader: 'module/appHeader/main',
@@ -62,15 +63,12 @@
         jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
       });
       /*默认跳转到首页info*/
-        if(!window.location.hash){
-          app.navigate('#info', true);
-        }
+      if(!window.location.hash){
+        app.navigate('#info', true);
+      }
     }else{
       app.utils.toast('企业微信配置加载失败');
     }
   });
-
-
-
 </script>
 </html>
