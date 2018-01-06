@@ -100,10 +100,19 @@ div {
 .arrow.on {
   transform: rotate(135deg);
 }
+.PGX_triggerToggle {
+  position: relative;
+  padding-right: 0.30555556rem;
+}
 .PGX_triggerToggle .arrow {
+  position: absolute;
+  right: 0;
+  top: 0.19444444rem;
   transform: rotate(-45deg);
 }
 .PGX_triggerToggle.on .arrow {
+  right: 0;
+  top: 0.25rem;
   transform: rotate(135deg);
 }
 .PGX_toggle {
