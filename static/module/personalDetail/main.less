@@ -10,39 +10,39 @@
 /*基本工具*/
 /*混合Mixin*/
 .nowrap () {
-	text-overflow:ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 };
 
 #personalDetail_wrap {
-	box-sizing: border-box;
-	padding-bottom: @r*160rem;
-	.PGX_number{
-		margin-left: @r*18rem;
-	}
-	.line{
-		box-sizing: border-box;
-		padding: @r*18rem @r*40rem;
-		border-bottom: @1px solid @br-gray;
-		padding-top: @r*18rem;
-		&:nth-child(1){
-			line-height: @r*124rem;
-			height: @r*134rem;
-		}
-		&>*{
-			line-height: @r*70rem;
-		}
-		&:last-child{
-			border-bottom: none;
-		}
-	}
-	.itemLine{
-		.ftGray{
-			margin-right: @r*33rem;
-		}
-	}
-	.PGX_title{
-		display: inline-block;
-	}
+  box-sizing: border-box;
+  padding-bottom: @r*160rem;
+  .PGX_number{
+    margin-left: @r*18rem;
+  }
+  .line{
+    box-sizing: border-box;
+    padding: @r*18rem @r*40rem;
+    border-bottom: @1px solid @br-gray;
+    padding-top: @r*18rem;
+    &:nth-child(1){
+      line-height: @r*124rem;
+      height: @r*134rem;
+    }
+    &>*{
+      line-height: @r*70rem;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  .itemLine{
+    .ftGray{
+      margin-right: @r*33rem;
+    }
+  }
+  .PGX_title{
+    display: inline-block;
+  }
 }
