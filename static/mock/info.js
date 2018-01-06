@@ -2,7 +2,7 @@ define(function () {
   return {
     req_info:{
       /*接口状态*/
-      status: 'success_personal',
+      status: 'success_share',
       /*报文*/
       success_personal:{
         "servertime": 1464085283,
@@ -41,7 +41,7 @@ define(function () {
         "status": 1,
         "errorcode": "",
         "data": {
-          isTop: 0,
+          isTop: 1,
         }
       },
       error:{"servertime":1510040546,"status":0,"errorcode":"抱歉!此宝箱已经过期！","data":[]}

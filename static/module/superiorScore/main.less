@@ -15,7 +15,7 @@
   white-space: nowrap;
 };
 
-#personalResult_wrap {
+#superiorScore_wrap {
   box-sizing: border-box;
   padding-bottom: @r*160rem;
   .PGX_number{
@@ -68,5 +68,41 @@
   .evaluateName{
     line-height: 0;
     margin-top: @r*32rem;
+  }
+  .blueBtn{
+    span{
+      display: inline-block;
+      line-height: @r*60rem;
+      width: @r*140rem;
+      height: @r*60rem;
+      text-align: center;
+      background: @c-blue;
+      color: @c-white;
+      border-radius: @r*6rem;
+    }
+  }
+  .scoreInput{
+    width: @r*80rem;
+    margin-right: @r*20rem;
+    border:none;
+    vertical-align: middle;
+    background: transparent;
+    text-align: center;
+  }
+  .footBtn{
+    border-top: @1px solid @br-gray;
+    box-sizing: border-box;
+    padding-left: @r*40rem;
+    background: @c-white;
+    color: #000;
+    .itr{
+      padding-right: @r*14rem;
+    }
+    .next{
+      color: @c-white;
+      background: @c-blue;
+      width: @r*222rem;
+      display: inline-block;
+    }
   }
 }

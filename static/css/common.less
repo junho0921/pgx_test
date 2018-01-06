@@ -19,7 +19,7 @@
   display: block;
 }
 /*普通*/
-p, h2, h3, span, a, div, input, textarea{
+p, h2, h3, span, a, div, input, textarea, label{
   font-weight: 400;
   font-family: "Microsoft YaHei", Arial, Verdana;
   font-size: @r*30rem;
@@ -72,7 +72,7 @@ p, h2, h3, span, a, div, input, textarea{
   width:100%;
   pointer-events: none;
   text-align: center;
-  top:50%;
+  top:calc(50% - @r*40rem);
   right:100%;
   left:0;
   box-sizing: border-box;
@@ -171,7 +171,7 @@ p, h2, h3, span, a, div, input, textarea{
   width:100%;
   pointer-events: none;
   text-align: center;
-  top:50%;
+  top:calc(50% - @r*40rem);
   right:100%;
   left:0;
   box-sizing: border-box;
@@ -194,6 +194,9 @@ p, h2, h3, span, a, div, input, textarea{
 /*靠右*/
 .PGX_fr{
   float: right;
+}
+.PGX_fl{
+  float: left;
 }
 .btnLoading{
   opacity:0.5;

@@ -20,7 +20,8 @@ span,
 a,
 div,
 input,
-textarea {
+textarea,
+label {
   font-weight: 400;
   font-family: "Microsoft YaHei", Arial, Verdana;
   font-size: 0.41666667rem;
@@ -71,7 +72,7 @@ textarea {
   width: 100%;
   pointer-events: none;
   text-align: center;
-  top: 50%;
+  top: calc(49.44444444%);
   right: 100%;
   left: 0;
   box-sizing: border-box;
@@ -173,7 +174,7 @@ textarea {
   width: 100%;
   pointer-events: none;
   text-align: center;
-  top: 50%;
+  top: calc(49.44444444%);
   right: 100%;
   left: 0;
   box-sizing: border-box;
@@ -201,6 +202,9 @@ textarea {
 /*靠右*/
 .PGX_fr {
   float: right;
+}
+.PGX_fl {
+  float: left;
 }
 .btnLoading {
   opacity: 0.5;

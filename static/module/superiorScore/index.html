@@ -1,8 +1,8 @@
-<div id="psuperiorScore_wrap">
+<div id="superiorScore_wrap">
 	<!--content-->
 </div>
 
-<script type="text/html" id="psuperiorScoreTpl">
+<script type="text/html" id="superiorScoreTpl">
 	<div>
 		<div class="line">
 			<h1 class="PGX_title"><%= name %></h1>
@@ -22,9 +22,18 @@
 				<% } %>
 				<h3><%= item.kpiKey %></h3>
 				<div class="itemLine">
-					<span class="ftGray">权重</span>
-					<span><%= item.kpiRate %></span>
-					<span class="PGX_fr PGX_number"><%= item.kpiSore %></span>
+					<span class="ftGray">权重</span><!--
+					--><span><%= item.kpiRate %></span>
+				</div>
+				<div class="itemLine">
+					<span class="ftGray">自评得分</span><!--
+					--><span><%= item.kpiSore %></span>
+					<div class="PGX_fr">
+						<label class="blueBtn">
+							<input data-key='<%= item.kpiKey %>' class="scoreInput PGX_number" type="number">
+							<span>评分</span>
+						</label>
+					</div>
 				</div>
 				<% if(item.info){ %>
 				<div class="PGX_triggerToggle itemInner" data-for="<%= index %>">查看详情<span class="arrow"></span></div>
@@ -40,8 +49,8 @@
 		<!--综合自评-->
 		<% if(selfEvaluate){ %>
 		<div class="line">
-			<div class="PGX_triggerToggle ftBlue" data-for="17selfEvaluate">综合自评<span class="arrow"></span></div>
-			<div class="PGX_toggle content" data-id="17selfEvaluate">
+			<div class="ftBlue">综合自评</div>
+			<div class="content">
 				<%= selfEvaluate %>
 			</div>
 		</div>
@@ -49,28 +58,19 @@
 		<!--2018年规划-->
 		<% if(future){ %>
 		<div class="line">
-			<div class="PGX_triggerToggle ftBlue" data-for="18future">2018年规划<span class="arrow"></span></div>
-			<div class="PGX_toggle content" data-id="18future">
+			<div class="ftBlue">2018年规划</div>
+			<div class="content">
 				<%= future %>
 			</div>
 		</div>
 		<% }%>
-		<!--同事评价-->
-		<% if($.isArray(evaluateLists) && evaluateLists.length > 0){ %>
-		<% _.each(evaluateLists, function(item, index) {%>
-		<div class="line">
-			<% if(index===0){ %>
-			<h2 class="ftBlue">同事评价</h2>
-			<% } %>
-			<div>
-				<h3 class="evaluateName"><%= item.name %></h3>
-				<span class="pos PGX_desc"><%= item.pos %></span>
-				<div class="content"><%= item.evaluate %></div>
-			</div>
-		</div>
-		<%});%>
-		<% }%>
 	</div>
 	<!--分享-->
-	<span class="footBtn PGX_forward shareBtn"><span>分享</span></span>
+	<span class="footBtn">
+		<span class="itr PGX_desc PGX_fl">已评价权重</span><!--
+		--><span id="scorePer" class="ftBlue PGX_desc PGX_fl">0%</span><!--
+		--><span class="itr PGX_desc">综合得分</span><!--
+		--><span id="scoreTotal" class="ftBlue PGX_desc">0</span><!--
+		--><span class="next PGX_fr">下一步</span>
+	</span>
 </script>

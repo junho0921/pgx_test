@@ -1,51 +1,85 @@
 /*基本工具*/
 /*混合Mixin*/
-#personalResult_wrap {
+#superiorScore_wrap {
   box-sizing: border-box;
   padding-bottom: 2.22222222rem;
 }
-#personalResult_wrap .PGX_number {
+#superiorScore_wrap .PGX_number {
   margin-left: 0.25rem;
 }
-#personalResult_wrap .line {
+#superiorScore_wrap .line {
   box-sizing: border-box;
   padding: 0.25rem 0.55555556rem;
   border-bottom: 0.01388889rem solid #e5e5e5;
   padding-top: 0.25rem;
 }
-#personalResult_wrap .line > * {
+#superiorScore_wrap .line > * {
   line-height: 0.97222222rem;
 }
-#personalResult_wrap .line:nth-child(1) {
+#superiorScore_wrap .line:nth-child(1) {
   line-height: 1.72222222rem;
   height: 1.86111111rem;
 }
-#personalResult_wrap .line:last-child {
+#superiorScore_wrap .line:last-child {
   border-bottom: none;
 }
-#personalResult_wrap .line .content {
+#superiorScore_wrap .line .content {
   line-height: 0.66666667rem;
 }
-#personalResult_wrap .itemLine .ftGray {
+#superiorScore_wrap .itemLine .ftGray {
   margin-right: 0.45833333rem;
 }
-#personalResult_wrap .PGX_title {
+#superiorScore_wrap .PGX_title {
   display: inline-block;
 }
-#personalResult_wrap .itemInner.PGX_triggerToggle {
+#superiorScore_wrap .itemInner.PGX_triggerToggle {
   display: inline-block;
   padding-right: 0.63888889rem;
 }
-#personalResult_wrap .itemInner.PGX_triggerToggle .arrow {
+#superiorScore_wrap .itemInner.PGX_triggerToggle .arrow {
   border-color: #888;
 }
-#personalResult_wrap .PGX_triggerToggle .arrow {
+#superiorScore_wrap .PGX_triggerToggle .arrow {
   top: 0.36111111rem;
 }
-#personalResult_wrap .PGX_triggerToggle.on .arrow {
+#superiorScore_wrap .PGX_triggerToggle.on .arrow {
   top: 0.47222222rem;
 }
-#personalResult_wrap .evaluateName {
+#superiorScore_wrap .evaluateName {
   line-height: 0;
   margin-top: 0.44444444rem;
+}
+#superiorScore_wrap .blueBtn span {
+  display: inline-block;
+  line-height: 0.83333333rem;
+  width: 1.94444444rem;
+  height: 0.83333333rem;
+  text-align: center;
+  background: #0090ff;
+  color: #fff;
+  border-radius: 0.08333333rem;
+}
+#superiorScore_wrap .scoreInput {
+  width: 1.11111111rem;
+  margin-right: 0.27777778rem;
+  border: none;
+  vertical-align: middle;
+  background: transparent;
+  text-align: center;
+}
+#superiorScore_wrap .footBtn {
+  border-top: 0.01388889rem solid #e5e5e5;
+  box-sizing: border-box;
+  padding-left: 0.55555556rem;
+  background: #fff;
+  color: #000;
+}
+#superiorScore_wrap .footBtn .itr {
+  padding-right: 0.19444444rem;
+}
+#superiorScore_wrap .footBtn .next {
+  color: #fff;
+  background: #0090ff;
+  width: 3.08333333rem;
+  display: inline-block;
 }
