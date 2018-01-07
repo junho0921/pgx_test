@@ -1,5 +1,22 @@
-<div id="superiorScore_wrap">
-	<!--content-->
+<div id="superiorScore_wrap" class="scoreMode">
+	<div id="scorePanel"></div>
+	<div id="evaluatePanel">
+		<h1 class="targetName"></h1>
+		<p>请对他的年终总结进行评价</p>
+		<textarea class="popFocus" id="evaluateInput" placeholder="请输入评语，不少于50字"></textarea>
+		<div class="PGX_footer">
+			<span class="submitSE">提交</span><!--
+			--><span class="returnScore PGX_fr">返回</span>
+		</div>
+	</div>
+
+	<div class="PGX_pop" id="notScoreTips" data-id="nextInput">
+		<div class="PGX_cover PGX_closePop"></div>
+		<div class="PGX_cover_content">
+			<div class="content"><p class="tips">需要完成所有的评分项目后才能提交</p></div>
+			<span class="PGX_closePop PGX_fr ftBlue">确认</span>
+		</div>
+	</div>
 </div>
 
 <script type="text/html" id="superiorScoreTpl">
@@ -23,24 +40,28 @@
 				<h3><%= item.kpiKey %></h3>
 				<div class="itemLine">
 					<span class="ftGray">权重</span><!--
-					--><span><%= item.kpiRate %></span>
+					--><span><%= item.proportion %></span>
 				</div>
 				<div class="itemLine">
 					<span class="ftGray">自评得分</span><!--
 					--><span><%= item.kpiSore %></span>
-					<div class="PGX_fr">
+					<div class="posRight">
 						<label class="blueBtn">
-							<input data-key='<%= item.kpiKey %>' class="scoreInput PGX_number" type="number">
+							<input data-key='<%= item.kpiKey %>'
+								   data-proportion='<%= item.proportion.replace("%", "") %>' class="scoreInput PGX_number" type="number">
 							<span>评分</span>
 						</label>
 					</div>
 				</div>
 				<% if(item.info){ %>
-				<div class="PGX_triggerToggle itemInner" data-for="<%= index %>">查看详情<span class="arrow"></span></div>
-				<div class="PGX_toggle" data-id="<%= index %>">
-					<span class="PGX_toggleInfo">
-						<%= item.info %>
-					</span>
+				<div class="borderTop">
+					<div class="PGX_triggerToggle itemInner " data-for="<%= index %>">查看详情<span class="arrow"></span></div>
+					<div class="PGX_toggle" data-id="<%= index %>">
+						<span class="PGX_toggleInfo content">
+							<%= item.info %>
+						</span>
+						<span class="PGX_toggle_hide ftBlue">收起来<span class="arrow on"></span></span>
+					</div>
 				</div>
 				<% } %>
 			</div>
@@ -70,7 +91,7 @@
 		<span class="itr PGX_desc PGX_fl">已评价权重</span><!--
 		--><span id="scorePer" class="ftBlue PGX_desc PGX_fl">0%</span><!--
 		--><span class="itr PGX_desc">综合得分</span><!--
-		--><span id="scoreTotal" class="ftBlue PGX_desc">0</span><!--
-		--><span class="next PGX_fr">下一步</span>
+		--><span id="scoreTotal" class="ftBlue PGX_desc">0分</span><!--
+		--><span class="enterEvaluate PGX_fr PGX_triggerPop" data-for="nextInput">下一步</span>
 	</span>
 </script>

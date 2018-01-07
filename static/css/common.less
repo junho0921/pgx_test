@@ -30,6 +30,15 @@ p, h2, h3, span, a, div, input, textarea, label{
   color: @c-blue;
 }
 
+.PGX_footer{
+  line-height: @r*100rem;
+  height: @r*100rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left:0;
+}
+
 .footBtn{
   line-height: @r*100rem;
   height: @r*100rem;
@@ -99,8 +108,8 @@ p, h2, h3, span, a, div, input, textarea, label{
   cursor: pointer;
   border-left: @r*3rem solid @c-blue;
   border-bottom: @r*3rem solid @c-blue;
-  width: @r*12rem;
-  height: @r*12rem;
+  width: @r*14rem;
+  height: @r*14rem;
   transform:rotate(-45deg);
   &.on{
     transform:rotate(135deg);
@@ -112,13 +121,13 @@ p, h2, h3, span, a, div, input, textarea, label{
   .arrow{
     position: absolute;
     right: 0;
-    top: @r*14rem;
+    top: @r*12rem;
     transform:rotate(-45deg);
   }
   &.on{
     .arrow{
       right: 0;
-      top: @r*18rem;
+      top: @r*16rem;
       transform:rotate(135deg);
     }
   }

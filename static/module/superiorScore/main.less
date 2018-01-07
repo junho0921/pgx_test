@@ -17,30 +17,68 @@
 
 #superiorScore_wrap {
   box-sizing: border-box;
-  padding-bottom: @r*160rem;
+  /*评分模式*/
+  &.scoreMode{
+    #scorePanel{
+      display: block;
+    }
+    #evaluatePanel{
+      display: none;
+    }
+  }
+  /*评价模式*/
+  #scorePanel{
+    display: none;
+  }
+  #evaluatePanel{
+    display: block;
+    padding: @r*45rem @r*40rem;
+  }
+  .targetName{
+    margin-bottom: @r*26rem;
+  }
   .PGX_number{
     margin-left: @r*18rem;
   }
   .line{
     box-sizing: border-box;
-    padding: @r*18rem @r*40rem;
-    border-bottom: @1px solid @br-gray;
+    padding: @r*18rem 0;
+    border-bottom: @r*10rem solid #e5e5e5;
     padding-top: @r*18rem;
+    .borderTop{
+      border-top: @1px solid @br-gray;
+      margin-top: @r*20rem;
+      margin-bottom: -@r*8rem;
+      padding-top: @r*8rem;
+    }
     &>*{
+      box-sizing: border-box;
+      padding: 0 @r*40rem;
       line-height: @r*70rem;
     }
     &:nth-child(1){
       line-height: @r*124rem;
       height: @r*134rem;
+      border-bottom: @1px solid @br-gray;
     }
     &:last-child{
       border-bottom: none;
+      border-bottom: @r*200rem solid #e5e5e5;
     }
     .content{
       line-height: @r*48rem;
     }
+    .PGX_toggleInfo.content{
+      padding: @r*10rem 0;
+    }
   }
   .itemLine{
+    position: relative;
+    .posRight{
+      position: absolute;
+      right:@r*40rem;
+      bottom:@r*14rem;
+    }
     .ftGray{
       margin-right: @r*33rem;
     }
@@ -55,19 +93,22 @@
       border-color: #888;
     }
   }
+  #evaluateInput{
+    width: 100%;
+    height: @r*400rem;
+    border: none;
+    margin-top: @r*82rem;
+    background: transparent;
+  }
   .PGX_triggerToggle{
     .arrow{
-      top: @r*26rem;
+      top: @r*22rem;
     }
     &.on{
       .arrow{
         top: @r*34rem;
       }
     }
-  }
-  .evaluateName{
-    line-height: 0;
-    margin-top: @r*32rem;
   }
   .blueBtn{
     span{
@@ -81,15 +122,58 @@
       border-radius: @r*6rem;
     }
   }
+  .submitSE{
+    display: inline-block;
+    line-height: @r*100rem;
+    height: @r*100rem;
+    width: @r*480rem;
+    text-align: center;
+    background: @c-blue;
+    color: @c-white;
+    border-radius: @r*50rem;
+  }
+  .PGX_footer{
+    box-sizing: border-box;
+    padding: 0 @r*40rem;
+    bottom: @r*40rem;
+    .nowrap;
+    .returnScore{
+      margin-right: @r*30rem;
+    }
+  }
   .scoreInput{
-    width: @r*80rem;
+    width: @r*82rem;
     margin-right: @r*20rem;
     border:none;
     vertical-align: middle;
     background: transparent;
     text-align: center;
   }
+  .PGX_cover_content{
+    width:10rem;
+    box-sizing: border-box;
+    text-align: left;
+    .tips{
+      display: block;
+      margin-bottom: @r*88rem;
+    }
+    .ftBlue{
+      font-size: @r*38rem;
+    }
+  }
+  .PGX_toggleInfo{
+    display: block;
+    width:100%;
+  }
+  .PGX_toggle_hide{
+    .arrow{
+      margin-left: @r*20rem;
+      position: relative;
+      top: @r*3rem;
+    }
+  }
   .footBtn{
+    .nowrap;
     border-top: @1px solid @br-gray;
     box-sizing: border-box;
     padding-left: @r*40rem;
@@ -98,11 +182,16 @@
     .itr{
       padding-right: @r*14rem;
     }
-    .next{
+    .enterEvaluate{
       color: @c-white;
       background: @c-blue;
       width: @r*222rem;
       display: inline-block;
+    }
+    .PGX_pop_content{
+      width: @r*720rem;
+      top: @r*720rem;
+      box-sizing: border-box;
     }
   }
 }

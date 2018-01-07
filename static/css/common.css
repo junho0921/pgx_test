@@ -30,6 +30,14 @@ label {
   font-size: 0.55555556rem;
   color: #0090ff;
 }
+.PGX_footer {
+  line-height: 1.38888889rem;
+  height: 1.38888889rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
 .footBtn {
   line-height: 1.38888889rem;
   height: 1.38888889rem;
@@ -104,8 +112,8 @@ label {
   cursor: pointer;
   border-left: 0.04166667rem solid #0090ff;
   border-bottom: 0.04166667rem solid #0090ff;
-  width: 0.16666667rem;
-  height: 0.16666667rem;
+  width: 0.19444444rem;
+  height: 0.19444444rem;
   transform: rotate(-45deg);
 }
 .arrow.on {
@@ -118,12 +126,12 @@ label {
 .PGX_triggerToggle .arrow {
   position: absolute;
   right: 0;
-  top: 0.19444444rem;
+  top: 0.16666667rem;
   transform: rotate(-45deg);
 }
 .PGX_triggerToggle.on .arrow {
   right: 0;
-  top: 0.25rem;
+  top: 0.22222222rem;
   transform: rotate(135deg);
 }
 .PGX_toggle {

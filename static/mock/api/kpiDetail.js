@@ -18,25 +18,25 @@ define(function () {
         kpiLists: [
           {
             kpiKey: '业务',
-            kpiRate: '50%',
+            proportion: '50%',
             kpiSore: 90,
-            info: '情况什么5sss'
+            info: '情况什么5sss情况什么5sss情况什么5sss情况什么5sss情况什么5sss情况什么5sss情况什么5sss情况什么5sss情况什么5sss'
           },
           {
             kpiKey: '技术',
-            kpiRate: '30%',
+            proportion: '30%',
             kpiSore: 92,
             info: '情况什么4sss'
           },
           {
             kpiKey: '知识分享',
-            kpiRate: '10%',
+            proportion: '10%',
             kpiSore: 93,
             info: '情况什么1sss'
           },
           {
             kpiKey: '个人提升',
-            kpiRate: '10%',
+            proportion: '10%',
             kpiSore: 91,
             info: '情况什么2sss'
           },

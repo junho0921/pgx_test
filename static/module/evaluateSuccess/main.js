@@ -12,7 +12,7 @@ define(function (require, exports, module) {
       if(app.global.info){
         if(app.global.info.isTop === true){
           renderObj.btnTxt = '查看';
-          renderObj.btnLink = 'peerDetail';
+          renderObj.btnLink = 'superiorScore';
         }else if(app.global.info.isTop === false){
           renderObj.btnTxt = '查看';
           renderObj.btnLink = 'peerDetail';

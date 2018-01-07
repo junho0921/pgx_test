@@ -33,10 +33,6 @@
 #peerDetail_wrap .PGX_title {
   display: inline-block;
 }
-#peerDetail_wrap .PGX_cover_content {
-  width: 10rem;
-  box-sizing: border-box;
-}
 #peerDetail_wrap #evaluateInput {
   width: 100%;
   height: 3.47222222rem;

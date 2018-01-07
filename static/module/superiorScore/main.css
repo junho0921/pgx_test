@@ -2,29 +2,67 @@
 /*混合Mixin*/
 #superiorScore_wrap {
   box-sizing: border-box;
-  padding-bottom: 2.22222222rem;
+  /*评分模式*/
+  /*评价模式*/
+}
+#superiorScore_wrap.scoreMode #scorePanel {
+  display: block;
+}
+#superiorScore_wrap.scoreMode #evaluatePanel {
+  display: none;
+}
+#superiorScore_wrap #scorePanel {
+  display: none;
+}
+#superiorScore_wrap #evaluatePanel {
+  display: block;
+  padding: 0.625rem 0.55555556rem;
+}
+#superiorScore_wrap .targetName {
+  margin-bottom: 0.36111111rem;
 }
 #superiorScore_wrap .PGX_number {
   margin-left: 0.25rem;
 }
 #superiorScore_wrap .line {
   box-sizing: border-box;
-  padding: 0.25rem 0.55555556rem;
-  border-bottom: 0.01388889rem solid #e5e5e5;
+  padding: 0.25rem 0;
+  border-bottom: 0.13888889rem solid #e5e5e5;
   padding-top: 0.25rem;
 }
+#superiorScore_wrap .line .borderTop {
+  border-top: 0.01388889rem solid #e5e5e5;
+  margin-top: 0.27777778rem;
+  margin-bottom: -0.11111111rem;
+  padding-top: 0.11111111rem;
+}
 #superiorScore_wrap .line > * {
+  box-sizing: border-box;
+  padding: 0 0.55555556rem;
   line-height: 0.97222222rem;
 }
 #superiorScore_wrap .line:nth-child(1) {
   line-height: 1.72222222rem;
   height: 1.86111111rem;
+  border-bottom: 0.01388889rem solid #e5e5e5;
 }
 #superiorScore_wrap .line:last-child {
   border-bottom: none;
+  border-bottom: 2.77777778rem solid #e5e5e5;
 }
 #superiorScore_wrap .line .content {
   line-height: 0.66666667rem;
+}
+#superiorScore_wrap .line .PGX_toggleInfo.content {
+  padding: 0.13888889rem 0;
+}
+#superiorScore_wrap .itemLine {
+  position: relative;
+}
+#superiorScore_wrap .itemLine .posRight {
+  position: absolute;
+  right: 0.55555556rem;
+  bottom: 0.19444444rem;
 }
 #superiorScore_wrap .itemLine .ftGray {
   margin-right: 0.45833333rem;
@@ -39,15 +77,18 @@
 #superiorScore_wrap .itemInner.PGX_triggerToggle .arrow {
   border-color: #888;
 }
+#superiorScore_wrap #evaluateInput {
+  width: 100%;
+  height: 5.55555556rem;
+  border: none;
+  margin-top: 1.13888889rem;
+  background: transparent;
+}
 #superiorScore_wrap .PGX_triggerToggle .arrow {
-  top: 0.36111111rem;
+  top: 0.30555556rem;
 }
 #superiorScore_wrap .PGX_triggerToggle.on .arrow {
   top: 0.47222222rem;
-}
-#superiorScore_wrap .evaluateName {
-  line-height: 0;
-  margin-top: 0.44444444rem;
 }
 #superiorScore_wrap .blueBtn span {
   display: inline-block;
@@ -59,15 +100,60 @@
   color: #fff;
   border-radius: 0.08333333rem;
 }
+#superiorScore_wrap .submitSE {
+  display: inline-block;
+  line-height: 1.38888889rem;
+  height: 1.38888889rem;
+  width: 6.66666667rem;
+  text-align: center;
+  background: #0090ff;
+  color: #fff;
+  border-radius: 0.69444444rem;
+}
+#superiorScore_wrap .PGX_footer {
+  box-sizing: border-box;
+  padding: 0 0.55555556rem;
+  bottom: 0.55555556rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#superiorScore_wrap .PGX_footer .returnScore {
+  margin-right: 0.41666667rem;
+}
 #superiorScore_wrap .scoreInput {
-  width: 1.11111111rem;
+  width: 1.13888889rem;
   margin-right: 0.27777778rem;
   border: none;
   vertical-align: middle;
   background: transparent;
   text-align: center;
 }
+#superiorScore_wrap .PGX_cover_content {
+  width: 10rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+#superiorScore_wrap .PGX_cover_content .tips {
+  display: block;
+  margin-bottom: 1.22222222rem;
+}
+#superiorScore_wrap .PGX_cover_content .ftBlue {
+  font-size: 0.52777778rem;
+}
+#superiorScore_wrap .PGX_toggleInfo {
+  display: block;
+  width: 100%;
+}
+#superiorScore_wrap .PGX_toggle_hide .arrow {
+  margin-left: 0.27777778rem;
+  position: relative;
+  top: 0.04166667rem;
+}
 #superiorScore_wrap .footBtn {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-top: 0.01388889rem solid #e5e5e5;
   box-sizing: border-box;
   padding-left: 0.55555556rem;
@@ -77,9 +163,14 @@
 #superiorScore_wrap .footBtn .itr {
   padding-right: 0.19444444rem;
 }
-#superiorScore_wrap .footBtn .next {
+#superiorScore_wrap .footBtn .enterEvaluate {
   color: #fff;
   background: #0090ff;
   width: 3.08333333rem;
   display: inline-block;
+}
+#superiorScore_wrap .footBtn .PGX_pop_content {
+  width: 10rem;
+  top: 10rem;
+  box-sizing: border-box;
 }

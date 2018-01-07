@@ -1,5 +1,6 @@
 define(function (require, exports, module) {
   var kpiDetail = require('mock/api/kpiDetail');
+  var postEvaluate= require('mock/api/postEvaluate');
   return {
     kpiDetail: kpiDetail,
     reqEvaluateData: {
@@ -16,18 +17,6 @@ define(function (require, exports, module) {
       },
       error:{"servertime":1510040546,"status":0,"errorcode":"抱歉!此宝箱已经过期！","data":[]}
     },
-    successEvaluate: {
-      /*接口状态*/
-      status: 'success',
-      /*报文*/
-      success: {
-        "servertime": 1464085283,
-        "status": 1,
-        "errorcode": "",
-        "data": {
-        },
-      },
-      error:{"servertime":1510040546,"status":0,"errorcode":"抱歉!此宝箱已经过期！","data":[]}
-    },
+    postEvaluate: postEvaluate,
   };
 });
