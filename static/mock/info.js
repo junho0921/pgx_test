@@ -41,7 +41,7 @@ define(function () {
         "status": 1,
         "errorcode": "",
         "data": {
-          isTop: 1,
+          isTop: 0,
         }
       },
       error:{"servertime":1510040546,"status":0,"errorcode":"抱歉!此宝箱已经过期！","data":[]}

@@ -49,3 +49,9 @@
 #peerDetail_wrap .PGX_fr .PGX_closePop {
   padding-right: 0.55555556rem;
 }
+#peerDetail_wrap .PGX_cover_content {
+  width: 10rem;
+  box-sizing: border-box;
+  right: 0rem;
+  bottom: 0.83333333rem;
+}

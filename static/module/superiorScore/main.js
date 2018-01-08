@@ -6,17 +6,16 @@ define(function (require, exports, module) {
 
   module.exports = app.View.extend({
     initialize:function () {
-      //if(app.global.info === undefined || app.global.info.isTop !== true){
-      //  app.utils.toast('正返回首页');
-      //  return setTimeout(function () {
-      //    app.navigate('#info', true);
-      //  }, 1000);
-      //}
+      if(app.global.info === undefined || app.global.info.isTop !== true){
+       app.utils.toast('正返回首页');
+       return setTimeout(function () {
+         app.navigate('#info', true);
+       }, 1000);
+      }
       app.utils.loadingPage('#scorePanel');
       this.reqData();
-
-      //this.$('#evaluatePanel .targetName').text(app.global.info.name);
-      this.$('#evaluatePanel .targetName').text('江立');
+      this.$('#evaluatePanel .targetName').text(app.global.info.name);
+      // this.$('#evaluatePanel .targetName').text('江立');
     },
     events:{
       'touchstart .submitSE': 'submitSE',
