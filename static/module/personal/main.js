@@ -34,7 +34,8 @@ define(function (require, exports, module) {
     },
     invite: function () {
       console.log('邀请');
-      app.utils.toast('todo 还没有接入api');
+      // app.utils.toast('todo 还没有接入api');
+      app.share();
     }
   });
 });

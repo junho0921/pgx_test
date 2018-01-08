@@ -52,7 +52,7 @@ define(function (require, exports, module) {
         data: data,
         success: function () {
           app.navigate('#evaluateSuccess', true);
-        },
+        }
       });
     },
     requestCallback: function (result) {
@@ -77,10 +77,12 @@ define(function (require, exports, module) {
       this.$('.enterEvaluate').toggleClass('PGX_triggerPop', !isEnough);
       if(isEnough) {
         this.$('#superiorScore_wrap').removeClass('scoreMode');
+        app.page.scrollTop(0);
       }
     },
     back: function () {
       this.$('#superiorScore_wrap').addClass('scoreMode');
+      app.page.scrollTop(0);
       return false;
     },
     renderCalc: function () {
@@ -110,15 +112,26 @@ define(function (require, exports, module) {
             $input.val(100);
           }
         }
+        value = $input.val();
         return {
           key: data.key,
           proportion: data.proportion,
-          score: $input.val()
+          score: value
         };
+      });
+    },
+    renderScoreList: function (scoreList) {
+      if(!scoreList){return;}
+      var $number = $('.PGX_number');
+      scoreList.each(function(_, data){
+        $number.filter('[data-bind='+data.key+']').text(data.score);
       });
     },
     calc: function () {
       var scoreList = this.getScoreList();
+      // 渲染
+      this.renderScoreList(scoreList);
+
       var total = {
         score: 0,
         proportion: 0,

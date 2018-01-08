@@ -54,7 +54,7 @@
   line-height: 0.66666667rem;
 }
 #superiorScore_wrap .line .PGX_toggleInfo.content {
-  padding: 0.13888889rem 0;
+  padding: 0.13888889rem 0 0.27777778rem 0;
 }
 #superiorScore_wrap .itemLine {
   position: relative;
@@ -63,6 +63,9 @@
   position: absolute;
   right: 0.55555556rem;
   bottom: 0.19444444rem;
+}
+#superiorScore_wrap .itemLine .posRight .PGX_number {
+  vertical-align: middle;
 }
 #superiorScore_wrap .itemLine .ftGray {
   margin-right: 0.45833333rem;
@@ -88,7 +91,7 @@
   top: 0.30555556rem;
 }
 #superiorScore_wrap .PGX_triggerToggle.on .arrow {
-  top: 0.47222222rem;
+  top: 0.38888889rem;
 }
 #superiorScore_wrap .blueBtn span {
   display: inline-block;
@@ -99,6 +102,7 @@
   background: #0090ff;
   color: #fff;
   border-radius: 0.08333333rem;
+  margin-left: 0.25rem;
 }
 #superiorScore_wrap .submitSE {
   display: inline-block;
@@ -122,17 +126,24 @@
   margin-right: 0.41666667rem;
 }
 #superiorScore_wrap .scoreInput {
-  width: 1.13888889rem;
-  margin-right: 0.27777778rem;
-  border: none;
+  font-size: 0.55555556rem;
+  height: 0.55555556rem;
+  line-height: 0.55555556rem;
   vertical-align: middle;
   background: transparent;
-  text-align: center;
+  padding-bottom: 1.05555556rem;
+  text-align: left;
+  position: relative;
+  display: block;
+  width: 6.66666667rem;
 }
 #superiorScore_wrap .PGX_cover_content {
   width: 10rem;
   box-sizing: border-box;
   text-align: left;
+  position: absolute;
+  right: -0.55555556rem;
+  bottom: -0.55555556rem;
 }
 #superiorScore_wrap .PGX_cover_content .tips {
   display: block;
@@ -140,6 +151,12 @@
 }
 #superiorScore_wrap .PGX_cover_content .ftBlue {
   font-size: 0.52777778rem;
+  height: 0.55555556rem;
+  line-height: 0.55555556rem;
+}
+#superiorScore_wrap .PGX_cover_content .PGX_fr {
+  height: 0.55555556rem;
+  line-height: 0.55555556rem;
 }
 #superiorScore_wrap .PGX_toggleInfo {
   display: block;

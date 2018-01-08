@@ -143,7 +143,8 @@ label {
 /*遮蔽层*/
 .PGX_pop {
   display: none;
-  position: fixed;
+  z-index: 99;
+  position: relative;
   text-align: center;
   left: 0;
   top: 0;
@@ -165,11 +166,12 @@ label {
 }
 .PGX_pop .PGX_cover_content {
   padding: 0.55555556rem;
-  top: 50%;
+  bottom: -0.55555556rem;
+  right: -0.55555556rem;
   display: inline-block;
   background: #fff;
   z-index: 2;
-  position: relative;
+  position: absolute;
 }
 .PGX_pop .PGX_cover_content input,
 .PGX_pop .PGX_cover_content textarea {

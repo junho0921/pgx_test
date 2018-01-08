@@ -46,11 +46,23 @@
 					<span class="ftGray">自评得分</span><!--
 					--><span><%= item.kpiSore %></span>
 					<div class="posRight">
-						<label class="blueBtn">
-							<input data-key='<%= item.kpiKey %>'
-								   data-proportion='<%= item.proportion.replace("%", "") %>' class="scoreInput PGX_number" type="number">
-							<span>评分</span>
-						</label>
+						<!--<label class="blueBtn">-->
+							<!--<input data-key='<%= item.kpiKey %>' data-proportion='<%= item.proportion.replace("%", "") %>' class="scoreInput PGX_number" type="number">-->
+							<!--<span>评分</span>-->
+						<!--</label>-->
+						<span class="PGX_number" data-bind="<%= item.kpiKey %>"></span><!--
+						--><span class="PGX_triggerPop blueBtn" data-for="<%= item.kpiKey %>"><span>评分</span></span>
+						<div class="PGX_pop" data-id="<%= item.kpiKey %>">
+							<div class="PGX_cover PGX_closePop"></div>
+							<div class="PGX_cover_content">
+								<input data-key='<%= item.kpiKey %>'
+									   value="1"
+									   data-proportion='<%= item.proportion.replace("%", "") %>' class="scoreInput popFocus" type="number" placeholder="请输入得分">
+								<div class="PGX_fr">
+									<span class="PGX_closePop ftBlue">确认</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<% if(item.info){ %>
@@ -60,7 +72,7 @@
 						<span class="PGX_toggleInfo content">
 							<%= item.info %>
 						</span>
-						<span class="PGX_toggle_hide ftBlue">收起来<span class="arrow on"></span></span>
+						<!--<span class="PGX_toggle_hide ftBlue">收起来<span class="arrow on"></span></span>-->
 					</div>
 				</div>
 				<% } %>

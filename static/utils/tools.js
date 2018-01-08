@@ -15,13 +15,15 @@ define(function (require, exports, module) {
 			return $('<div class="PGX_toast"><span>'+htmlTxt+'</span></div>');
     },
 		toast: function (htmlTxt) {
+			if(typeof htmlTxt !== 'string'){
+        htmlTxt = JSON.stringify(htmlTxt);
+			}
       if($e.$toast){
         $e.$toast.remove();
 			}
       $e.$toast = utils.renderTips(htmlTxt);
       $e.$toast
         .on('animationend', function () {
-          console.log('toastend');
           $e.$toast.remove();
           $e.$toast = null;
         })

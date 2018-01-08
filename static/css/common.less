@@ -142,10 +142,11 @@ p, h2, h3, span, a, div, input, textarea, label{
 /*遮蔽层*/
 .PGX_pop{
   display: none;
+  z-index: 99;
   &.on{
     display: block;
   }
-  position: fixed;
+  position: relative;
   text-align: center;
   left: 0;
   top: 0;
@@ -163,11 +164,12 @@ p, h2, h3, span, a, div, input, textarea, label{
   }
   .PGX_cover_content{
     padding: @r*40rem ;
-    top: 50%;
+    bottom: -@r*40rem ;
+    right: -@r*40rem ;
     display: inline-block;
     background: #fff;
     z-index: 2;
-    position: relative;
+    position: absolute;
     input, textarea{
       line-height: @r*40rem ;
       border: none;

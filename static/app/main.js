@@ -20,20 +20,20 @@ define(function (require, exports, module) {
 			/*工具*/
 			utils: tools,
 			renderTpl : tools.renderTpl,
-			controlSongs : tools.controlSongs,
-			/*视图类型*/
+			/*视图原型*/
 			View: Backbone.View.extend({el: $container})
 		};
 
-	function initBasisEvent () {
+	function initBasicEvent () {
     app.page
 			/*导航*/
       .on('touchstart', '.appLink', function () {
         var pageName = $(this).attr('data-link'),
           hashName = '#' + pageName;
         // 清理缓存
-        app.utils.savePageData(hashName, '');
+        // app.utils.savePageData(hashName, '');
         app.navigate(pageName, true);
+        return false;
       })
       /*切换显示*/
 			.on('touchstart', '.PGX_triggerToggle', function () {
@@ -41,24 +41,45 @@ define(function (require, exports, module) {
         var $e = $(this);
         var id = $e.data('for');
         $('.PGX_toggle[data-id='+id+']').toggleClass('on');
+        return false;
       })
-      .on('touchstart', '.PGX_toggle_hide', function () {
-        var $e = $(this);
-        $e.parents('.PGX_toggle.on').removeClass('on');
-      })
+      // .on('touchstart', '.PGX_toggle_hide', function () {
+      //   var $e = $(this);
+      //   $e.parents('.PGX_toggle.on').removeClass('on');
+      //   return false;
+      // })
 			/*弹窗*/
-      .on('touchstart', '.PGX_triggerPop', function () {
+      .on('touchstart', '.PGX_triggerPop', function (e) {
         var popId = $(this).data('for');
         var $pop = $('.PGX_pop[data-id='+popId+']').addClass('on');
-        var popH = $pop.find('.PGX_cover_content').height();
-        var winH = document.body.clientWidth;
-        $pop.find('.PGX_cover_content').css('top', (winH - popH) /2 );
-        setTimeout(function () {
-          $pop.find('.popFocus').focus();
-        }, 300);
+        function fixCenter () {
+          var popH = $pop.find('.PGX_cover_content').height();
+          var winH = document.body.clientWidth;
+          $pop.find('.PGX_cover_content').css('top', (winH - popH) /2 );
+        }
+        function scrollIfNeed (){
+          var $e = $pop.find('.PGX_cover_content');
+          var offset = $e.offset();
+          if(offset){
+            var scrollTop = app.page.scrollTop();
+            if(scrollTop > offset.top){
+              app.page.scrollTop(offset.top - 50);
+            }
+          }
+        }
+        scrollIfNeed();
+        $pop.find('.popFocus').focus();
+        return false;
       })
       .on('touchstart', '.PGX_closePop', function () {
-        $(this).parents('.PGX_pop.on').removeClass('on');
+        var $popWin = $(this).parents('.PGX_pop.on');
+        if($popWin[0]){
+          // 取消显示
+          $(this).parents('.PGX_pop.on').removeClass('on');
+          // 移除光标,收起输入框
+          $popWin.find(':focus').blur();
+        }
+        return false;
       });
   }
 
@@ -98,7 +119,7 @@ define(function (require, exports, module) {
 				return $.ajax(reqObj);
 			};
 
-      initBasisEvent();
+      initBasicEvent();
 			/*开启路由管理*/
 			Backbone.history.start();
 		}

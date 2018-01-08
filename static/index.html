@@ -9,6 +9,19 @@
   <link rel="stylesheet" href="css/common.css" type="text/css">
 </head>
 <body>
+<!--<span class="PGX_triggerPop blueBtn" data-for="sdsds"><span>评分</span></span>-->
+<!--<div class="PGX_pop" data-id="sdsds">-->
+  <!--<div class="PGX_cover PGX_closePop"></div>-->
+  <!--<div class="PGX_cover_content">-->
+    <!--<input data-key='<%= item.kpiKey %>'-->
+           <!--value="1"-->
+           <!--data-proportion='<%= item.proportion.replace("%", "") %>' class="scoreInput popFocus" type="number" placeholder="请输入得分">-->
+    <!--<div class="PGX_fr">-->
+      <!--<span class="PGX_closePop ftBlue">确认</span>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
 <div id="appWrap">
   <section id="appHeader"></section>
   <section id="appContainer"></section>
@@ -18,6 +31,8 @@
 <script>
   //    /*配置*/
   require.config({
+    // todo 测试使用的请求模块query值, 避开缓存
+    urlArgs: function () {return '?' + Date.now();},
     paths: {
       jquery: '../node_modules/jquery/dist/jquery',
 //    zepto: '../node_modules/zepto/dist/zepto',
@@ -60,8 +75,19 @@
         timestamp: wxConfig.timestamp, // 必填，生成签名的时间戳
         nonceStr: wxConfig.appId, // 必填，生成签名的随机串
         signature: wxConfig.signature,// 必填，签名，见[附录1](#11974)
-        jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        jsApiList: ['shareAppMessage', 'onMenuShareAppMessage', 'onMenuShareWechat'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
       });
+      window.app.share = function (data) {
+        data = data || {
+          title: '梁锦涛邀请您来参评',
+          desc: '2017年年度考核',
+          link: 'http://fanxing.kugou.com/fxweb/oa/kpi2017?username=jintaoliang',
+          imgUrl: 'http://p3.fx.kgimg.com//v2/fxuserlogo/T1ksdEBg__1RCvBVdK.jpg_200x200.jpg'
+        };
+        wx.invoke('shareAppMessage', data, app.utils.toast);
+      };
+      wx.error(app.utils.toast);
+
       /*默认跳转到首页info*/
       if(!window.location.hash){
         app.navigate('#info', true);

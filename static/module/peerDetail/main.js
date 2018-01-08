@@ -22,7 +22,7 @@ define(function (require, exports, module) {
     },
     reqKpiData: function () {
       app.request({
-        url: 'reqPersonalDetailData',
+        url: 'kpiDetail',
         success: this.requestCallback,
       });
     },

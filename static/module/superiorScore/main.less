@@ -37,7 +37,8 @@
   .targetName{
     margin-bottom: @r*26rem;
   }
-  .PGX_number{
+
+  .PGX_number {
     margin-left: @r*18rem;
   }
   .line{
@@ -69,7 +70,7 @@
       line-height: @r*48rem;
     }
     .PGX_toggleInfo.content{
-      padding: @r*10rem 0;
+      padding: @r*10rem 0 @r*20rem 0;
     }
   }
   .itemLine{
@@ -78,6 +79,9 @@
       position: absolute;
       right:@r*40rem;
       bottom:@r*14rem;
+      .PGX_number{
+        vertical-align: middle;
+      }
     }
     .ftGray{
       margin-right: @r*33rem;
@@ -106,7 +110,7 @@
     }
     &.on{
       .arrow{
-        top: @r*34rem;
+        top: @r*28rem;
       }
     }
   }
@@ -120,6 +124,7 @@
       background: @c-blue;
       color: @c-white;
       border-radius: @r*6rem;
+      margin-left: @r*18rem;
     }
   }
   .submitSE{
@@ -142,23 +147,36 @@
     }
   }
   .scoreInput{
-    width: @r*82rem;
-    margin-right: @r*20rem;
-    border:none;
+    font-size: @r*40rem;
+    height: @r*40rem;
+    line-height: @r*40rem;
     vertical-align: middle;
     background: transparent;
-    text-align: center;
+    padding-bottom:  @r*76rem;
+    text-align: left;
+    position: relative;
+    display: block;
+    width: @r*480rem;
   }
   .PGX_cover_content{
     width:10rem;
     box-sizing: border-box;
     text-align: left;
+    position: absolute;
+    right: -@r*40rem;
+    bottom: -@r*40rem;
     .tips{
       display: block;
       margin-bottom: @r*88rem;
     }
     .ftBlue{
       font-size: @r*38rem;
+      height: @r*40rem;
+      line-height: @r*40rem;
+    }
+    .PGX_fr{
+      height: @r*40rem;
+      line-height: @r*40rem;
     }
   }
   .PGX_toggleInfo{
